@@ -1,4 +1,4 @@
-# Hikster Readme
+# Project Readme
 
 ## Development
 
