@@ -1,0 +1,41 @@
+---
+  - name: create dist directory
+    file:
+      state: directory
+      dest: '{{ app_install_dir }}/src/dist'
+
+  - name: install app configuration
+    template:
+      src: config.jsx
+      dest: '{{ app_install_dir }}/src/app/config.jsx'
+
+  - name: build javascript
+    command: npm run build
+    args:
+      chdir: '{{ app_install_dir }}/src'
+
+  - name: copy build files
+    command: cp -R {{ app_install_dir }}/src/{{ item }} {{ app_install_dir }}/public/
+    loop:
+      - css
+      - dist
+      - favicon.ico
+      - img
+      - index.html
+
+  - name: copy lib files
+    command: cp -R {{ app_install_dir }}/src/libs {{ app_install_dir }}/public/app/
+
+  - name: install nginx vhost configuration
+    template:
+      src: nginx.conf
+      dest: '{{ app_install_dir }}/conf/nginx.conf'
+
+  - name: link nginx vhost configuration
+    become: yes
+    file:
+      state: link
+      src: '{{ app_install_dir }}/conf/nginx.conf'
+      dest: /usr/local/etc/nginx/conf.d/{{ domain_name }}.conf
+    notify:
+      - restart nginx

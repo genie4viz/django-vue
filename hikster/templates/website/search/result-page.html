@@ -1,0 +1,43 @@
+{% extends "website/base.html" %}
+{% load i18n %}
+{% load static from staticfiles %}
+{% load render_bundle from webpack_loader %}
+
+{% block head_extra %}
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/result-page.css' %}">
+
+    {% include "website/components/map-scripts.html" %}
+
+{% endblock head_extra %}
+
+{% block body_container %}
+
+{{ activities|json_script:"activities-data" }}
+{{ types|json_script:"types-data" }}
+{{ difficulties|json_script:"difficulties-data" }}
+{{ poi_categories|json_script:"poi-categories-data" }}
+
+<div id="results-page">
+    {% include "website/components/search/search-form.html" %}
+
+    <div class="results-page">
+        {% include "website/components/search/results-container.html" %}
+
+        <div id="map" class="map" data-pagenav-name="{% trans 'Map' %}"></div>
+    </div>
+</div>
+{% endblock body_container %}
+
+{% block body_js %}
+    {% render_bundle "results_page" %}
+{% endblock body_js %}

@@ -1,0 +1,25 @@
+---
+  - name: install start-up configuration
+    become: yes
+    copy: >
+      src=postgresql
+      dest=/etc/rc.conf.d/postgresql
+
+  - name: stat the data directory
+    stat: path=/usr/local/pgsql/data
+    register: postgresql_data_dir
+
+  - name: initialize data directory
+    become: yes
+    command: /usr/sbin/service postgresql initdb
+    when: postgresql_data_dir.stat.exists == false
+
+  - name: start
+    become: yes
+    service: name=postgresql state=started
+
+  - name: create pgsql user database
+    become: yes
+    become_user: pgsql
+    command: /usr/local/bin/createdb pgsql
+    when: postgresql_data_dir.stat.exists == false

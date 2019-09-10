@@ -1,0 +1,45 @@
+$transparent-black: rgba(0, 0, 0, .5);
+
+.popup {
+  border-radius: em(10);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+
+  &--hidden {
+    display: none;
+  }
+
+  &::before {
+    border-bottom: 15px solid $white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    top: em(-29);
+    width: 0;
+  }
+
+  &--left {
+    &::before {
+      left: 25%;
+    }
+  }
+
+  &--middle {
+    &::before {
+      left: 50%;
+    }
+  }
+
+  &--right {
+    &::before {
+      left: 75%;
+    }
+  }
+}

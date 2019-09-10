@@ -1,0 +1,14 @@
+@import "layout";
+
+.misc-page {
+  &__content {
+    @include media($mobile) {
+      width: 100%;
+    }
+    @include media($tablet) {
+      margin: 0 auto;
+      width: 75% !important;
+    }
+    padding: em(30);
+  }
+}

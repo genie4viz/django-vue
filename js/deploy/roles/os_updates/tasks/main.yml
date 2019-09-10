@@ -1,0 +1,22 @@
+---
+  - name: download freebsd updates
+    become: yes
+    command: /usr/sbin/freebsd-update --not-running-from-cron fetch
+
+  - name: install freebsd updates
+    become: yes
+    command: /usr/sbin/freebsd-update install
+    register: update_result
+    failed_when: "update_result.rc > 1"
+
+  - name: upgrade remote repositories
+    become: yes
+    command: pkg update
+    environment:
+      ASSUME_ALWAYS_YES: yes
+
+  - name: upgrade outdated packages
+    become: yes
+    command: pkg upgrade
+    environment:
+      ASSUME_ALWAYS_YES: yes

@@ -1,0 +1,15 @@
+---
+  - name: copy ssh key
+    copy: >
+      content="{{ ssh_deploy_key }}"
+      dest=~/.ssh/{{ short_name }}-deploy
+      mode=0600
+
+  - name: checkout code
+    git: >
+      dest={{ app_install_dir }}/src
+      key_file=~/.ssh/{{ short_name }}-deploy
+      accept_hostkey=yes
+      repo={{ app_git_repo }}
+      version={{ app_git_version }}
+      force=yes

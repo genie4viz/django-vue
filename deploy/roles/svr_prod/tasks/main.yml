@@ -1,0 +1,52 @@
+---
+  - name: create uwsgi socket directory
+    become: yes
+    file: >
+      path={{ app_install_dir }}/var/uwsgi
+      state=directory
+      owner=www
+      group=www
+
+  - name: install uwsgi application config file
+    template: >
+      src=uwsgi.ini
+      dest={{ app_install_dir }}/conf/uwsgi.ini
+
+  - name: install nginx vhost configuration
+    template: >
+      src=nginx.conf
+      dest={{ app_install_dir }}/conf/nginx.conf
+
+  - name: link nginx vhost configuration
+    become: yes
+    file: >
+      state=link
+      src={{ app_install_dir }}/conf/nginx.conf
+      dest=/usr/local/etc/nginx/conf.d/{{ domain_name }}.conf
+    notify:
+      - restart nginx
+
+  - name: install supervisord configuration
+    template: >
+      src=supervisord.conf
+      dest={{ app_install_dir }}/conf/supervisord.conf
+
+  - name: link supervisord configuration
+    become: yes
+    file: >
+      state=link
+      src={{ app_install_dir }}/conf/supervisord.conf
+      dest=/usr/local/etc/supervisord.d/{{ domain_name }}.conf
+    notify:
+      - restart supervisord
+
+  - name: copy static files
+    django_manage: >
+      virtualenv={{ app_install_dir }}/env
+      app_path={{ app_install_dir }}/src
+      settings={{ app_django_settings }}
+      command=collectstatic
+
+  - name: ensure prod restarts
+    become: yes
+    supervisorctl: name={{ program_name }} state=restarted

@@ -1,0 +1,8 @@
+---
+  - name: install the geoip update script
+    become: yes
+    pkgng: name=geoipupdate
+
+  - name: download geoip updates
+    become: yes
+    command: /usr/local/bin/geoipupdate

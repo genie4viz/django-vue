@@ -1,0 +1,387 @@
+@import "layout";
+
+.results-page {
+  @include display(flex);
+  height: 100vh;
+
+  .map {
+    height: 100%;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $small-breakpoint)  {
+    .hide-on-small {
+      //display: none;
+    }
+  }
+
+  .accordion-wrapper {
+    padding-top: 6.9em;
+    z-index: 999 !important;
+    background-color: white;
+
+    .results-container__item {
+      width: auto;
+    }
+
+    @media screen and (max-width: $large-breakpoint) {
+      padding-top: 9.7em;
+    }
+
+    @media screen and (max-width: $medium-breakpoint) {
+      padding-top: 12.4em;
+    }
+
+    @media screen and (max-width: $small-breakpoint) {
+      padding-top: 22.4em;
+    }
+  }
+
+  .leaflet-bottom.leaflet-right {
+    z-index: 998 !important;
+  }
+
+  .leaflet-top.leaflet-right {
+
+    margin-top: 9.2em;
+
+    @media screen and (max-width: $large-breakpoint) {
+      margin-top: 12.8em;
+    }
+
+    @media screen and (max-width: $medium-breakpoint) {
+      margin-top: 16.7em;
+    }
+
+    @media screen and (max-width: $small-breakpoint) {
+      margin-top: 30em;
+    }
+}
+}
+
+.leaflet-top.leaflet-right {
+  z-index: 998 !important;
+}
+
+.map {
+
+    .leaflet-zoom-anim .leaflet-zoom-animated {
+    	-webkit-transition: -webkit-transform 1s cubic-bezier(0,0,0.25,1);
+    	   -moz-transition:    -moz-transform 1s cubic-bezier(0,0,0.25,1);
+    	     -o-transition:      -o-transform 1s cubic-bezier(0,0,0.25,1);
+    	        transition:         transform 1s cubic-bezier(0,0,0.25,1);
+    	}
+
+
+  cursor: pointer !important;
+
+  .leaflet-popup-content {
+    margin: 13px;
+
+    .lf-popup {
+
+      &.poi {
+          .header {
+            @include display(flex);
+            @include flex-direction(column);
+            @include align-items(center);
+            @include justify-content(center);
+
+            .icon {
+              width: 30px;
+              height: 30px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+
+              &.default {
+                background-image: none;
+              }
+
+              &.hebergement {
+                background-image: url("../img/SVG_Carte_Couleurs/2_colors/Icons_Hikster_2_colors-26.svg");
+              }
+            }
+
+            .text {
+              margin-left: 4px;
+              color: #639a3f;
+              font-size: 14px;
+              font-weight: bold;
+            }
+
+            .type {
+              color: #639a3f;
+              font-size: 12px;
+              margin-bottom: 4px;
+            }
+          }
+
+          .content {
+            padding: 5px;
+
+            div {
+              margin-bottom: 4px;
+
+              span {
+                color: #444;
+                font-weight: bold;
+                margin-right: 6px;
+              }
+            }
+
+            .description {
+              color: #777;
+              margin-bottom: 3px;
+              font-size: 15px;
+              font-style: italic;
+            }
+
+            .address,
+            .contacts {
+              margin: 10px 0;
+              font-weight: 600;
+              color: #666;
+              font-size: 11px;
+
+              .contact {
+                @include display(flex);
+                @include flex-direction(row);
+                @include align-items(center);
+
+                .icon {
+                  width: 15px;
+                  height: 15px;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-position: center;
+                  margin-bottom: 0;
+
+                  &.email {
+                    width: 25px;
+                    background-image: url("../img/SVG_Carte_Couleurs/2_colors/Icons_Hikster_2_colors-86.svg");
+                  }
+                }
+              }
+            }
+
+            &:empty {
+                display: none;
+            }
+          }
+      }
+
+      &.trail {
+          @include display(flex);
+          @include flex-direction(column);
+          @include align-items(stretch);
+
+          .section {
+              @include display(flex);
+              @include flex-direction(row);
+
+              .section-name {
+                  color: #4e822c;
+                  font-size: 13px;
+                  font-weight: bold;
+                  white-space: nowrap;
+              }
+
+              .section-values {
+                  @include display(flex);
+                  @include flex-direction(column);
+                  margin-left: 8px;
+              }
+
+              &.trail {
+                  margin-top: 15px;
+              }
+          }
+      }
+
+      .link {
+          color: #7ec450;
+          text-decoration: underline;
+          font-weight: bold;
+          font-size: 11px;
+          margin-top: 5px;
+
+        &:hover {
+          color: #4e822c;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .leaflet-control-container {
+      .leaflet-top.leaflet-right {
+          @include display(flex);
+          @include flex-direction(row);
+
+          .leaflet-control-scale { @include order(1); }
+          .leaflet-control-zoomhome { @include order(2); }
+      }
+  }
+
+  .marker-cluster {
+    div {
+      font-size: 9px;
+      font-weight: bold;
+    }
+
+    &.poi {
+      border-radius: 50% 50% 50% 0;
+
+      > div {
+        border-radius: 50% 50% 50% 0;
+      }
+
+      span {
+        font-size: 12px;
+        color: blue;
+      }
+    }
+  }
+}
+
+
+.legend-content {
+    background-color: #fff;
+
+    //NON BEM STYLE OVERWRITTEN
+    .ui.checkbox input[type="checkbox"] {
+      cursor: default;
+    }
+    .ui.checkbox .box:before, .ui.checkbox label:before {
+      width: 14px;
+      height: 14px;
+      }
+
+    .ui.checkbox &.box:after, .ui.checkbox label:after {
+      font-size: 10px;
+      width: 14px;
+      height: 14px;
+    }
+
+    .ui.checkbox input:checked ~ label:after {
+      color: #87d255;
+    }
+
+
+    .main-category {
+      color: #87d255;
+      background-color: #dbdada;
+      height: 3em;
+      display: table;
+      width: 100%;
+
+        h3 {
+          display: table-cell;
+          vertical-align: middle;
+          padding-left: 1em;
+        }
+    }
+
+    .select-all > label {
+      font-size: 13px;
+    }
+
+    .sport-categories {
+      display: none !important;
+    }
+
+    .poi-categories,.sport-categories {
+
+      column-count: 1;
+      column-width: 260px;
+    
+      //display: flex;
+      //grid-template-columns: 265px;
+      
+      //grid-auto-flow: column;
+      //grid-auto-rows: auto;
+      //justify-content: center;
+      //flex-wrap: wrap;
+      //flex-direction: column;
+      //grid-template-rows: auto;
+
+        /*@media screen and (min-width: $tablet-size) {
+          //grid-template-columns: 265px 265px;
+          column-count: 1;
+        }*/
+
+        @media screen and (min-width: $desktop-size) {
+          //grid-template-columns: 265px 265px 265px;
+          column-count: 3;
+        }
+
+        .poi-category,
+        .sport-category {
+           padding-left: 10px;
+           margin-bottom: 17px;
+           color: #555;
+           width: 260px;
+           display: inline-block;
+           //flex: auto;
+
+            .poi-category-title, .sport-category-title {
+                 margin-top: 10px;
+                 margin-bottom: 8px;
+                 font-weight: 700;
+                 font-size: 13px;
+                 color: #555;
+
+                 a {
+                   text-decoration: underline;
+                   color: #87d255;
+                   &:hover {
+                     cursor: pointer
+                   }
+                 }
+            }
+
+            .poi-items, .sport-items {
+              display: block;
+                .poi-item,.sport-item {
+                    @include display(flex);
+                    @include flex-direction(row);
+                    @include align-items(center);
+                    margin: 3px 0;
+                    font-size: 8px;
+
+                    div:first-child, label {
+                        margin-left: 5px;
+                    }
+
+                    .icon {
+                        width: 27px;
+                        min-width: 27px;
+                        height: 26px;
+                        margin-left: 10px;
+                        overflow: hidden;
+
+                        .icon-inner {
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 50px;
+                            height: 50px;
+                            margin-left: -12px;
+                            margin-top: -7px;
+                        }
+                    }
+
+                    label {
+                        margin-left: 10px;
+                        max-width: 250px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        color: #555;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

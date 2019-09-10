@@ -1,0 +1,148 @@
+.accordion-wrapper {
+    position: absolute;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1000;
+    background-color: #87d255;
+
+    @media only screen and (max-width:400px) {
+  		width: 100%;
+      font-size: 0.7em;
+}
+
+.homepage-link {
+  text-align: center;
+
+  img {
+    width: 90px;
+    margin-left: 0.2em;
+    padding: 1em 0.3em 0;
+  }
+}
+
+.accordion-menu {
+
+    .results-container__item {
+      width: auto;
+    }
+	}
+
+  &--second-level {
+    position: inherit;
+    margin: 0 -10px;
+    padding: 0 10px;
+  }
+}
+
+.accordion {
+  color: white;
+  padding: 0.85em;
+
+
+  &__title {
+    margin-bottom: 0px;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #ade684;
+    }
+
+    &--second-level {
+      background-color: white;
+      color: #4d4d4d;
+      font-size: small;
+      text-align: left;
+      padding-left: 15px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0px;
+    background-color: $white;
+    -webkit-transition: max-height 0.25s ease-out;
+
+    p {
+      text-align: center;
+      margin: 1em;
+    }
+
+    &--active {
+      max-height: 4000px;
+      -webkit-transition: max-height 0.8s ease-in 0.4s;
+    }
+  }
+
+  .legend-content {
+    overflow-x: hidden;
+  }
+}
+
+.ripple {
+
+  &--first-level {
+    position: relative;
+    padding: auto;
+    width: auto;
+    -webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        background: #90EE90;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20%;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 1s
+    }
+
+    &:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }
+  }
+
+  &--second-level {
+    position: relative;
+    padding: auto;
+    width: auto;
+    -webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      background: #fafafa;
+      display: block;
+      position: absolute;
+      padding-top: 300%;
+      padding-left: 350%;
+      margin-left: -20%;
+      margin-top: -120%;
+      opacity: 0;
+      transition: all 1s
+    }
+
+    &:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s
+    }
+  }
+}

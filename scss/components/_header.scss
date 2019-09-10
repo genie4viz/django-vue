@@ -1,0 +1,69 @@
+.hk-header {
+    background: transparentize($black, 1);
+    height: 50px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: height 0.3s, background-color 0.3s;
+    width: 100%;
+    z-index: 10;
+
+    #logo-img {
+        max-height: 3.5em;
+        margin-top: 5px;
+    }
+    
+    &--shrink {
+        background-color: $accent-color;
+        height: 50px;
+    }
+    &--inverted {
+        background-color: $accent-color;
+    }
+    &--white {
+        background-color: white !important;
+        
+        a {
+            color: $accent-color !important;
+        }
+    }
+    &--removable {
+        position: absolute;
+    }
+    &--results {
+        background-color: $accent-color;
+        z-index: 1000;
+        .hk-header__search {
+            display: inherit;
+        }
+    }
+
+    &__search {
+        display: none;
+        background-color: $almost-white;
+        width: 100%;
+        padding-top: -0.5em;
+    }
+    &__inner {
+        @include display(flex);
+        @include flex-flow(row wrap);
+        @include align-items(center);
+        @include justify-content(space-between);
+        margin: 0 auto;
+        //max-width: 69em;
+        padding: 0 1.875em;
+        width: 100%;
+
+    }
+    &__logo,
+    &__nav {
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+    }
+    // Non-BEM overrides
+    a {
+        color: $white;
+        padding-left: em(10);
+    }
+}

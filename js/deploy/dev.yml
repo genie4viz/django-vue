@@ -1,0 +1,20 @@
+---
+- hosts: all
+  vars_files:
+    - vaults/dev.yml
+  vars:
+    ansible_python_interpreter: /usr/local/bin/python3.6
+    domain_name: dev.hikster.com
+    api_root: http://api.dev.hikster.com
+    map_server: https://hiksterarcgis.goazimut.com/arcgis/rest/services/
+    map_service: Hikster_New_Schema_Test
+    short_name: hikster_frontend
+    app_git_version: deploy
+    app_git_repo: git@bitbucket.org:hikster/hiksterclientweb.git
+  roles:
+     - os_updates
+     - os_devel
+     - os_nginx
+     - app_dirs
+     - app_source
+     - svr_dev

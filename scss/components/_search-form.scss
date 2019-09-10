@@ -1,0 +1,172 @@
+@mixin vertical-border {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+@mixin horizontal-border {
+  border-bottom: 1px solid white !important;
+}
+
+.search-form {
+
+  &__button {
+    background-color: #a1a1a1;
+    width: 100%;
+
+    span {
+      font-size: large;
+    }
+    // Non-BEM overrides
+    &.ui.button {
+      border-radius: 0;
+      text-align: left;
+      height: 48px;
+    }
+  }
+
+  &--results-page {
+    display: inline-block;
+    width: 100%;
+    //height: 52px;
+    color: #87d255;
+    background-color: $almost-white;
+    overflow-x: visible;
+    -webkit-scrollbar: none;
+
+    #search-button {
+      background-color: $almost-white;
+      color: #333;
+
+      &:hover {
+        color: #87d255;
+      }
+    }
+
+
+    .Select-arrow-zone {
+      display: none;
+    }
+
+    .field--modified {
+      display: inherit;
+      //width: 15%;
+      min-width: 140px;
+      margin-bottom: -20px;
+      text-align: center;
+      background-color: $almost-white;
+      padding: .4em 0 !important;
+      border-bottom: none !important;
+      @include vertical-border;
+      margin-left: -1px;
+
+      @media screen and (max-width: $medium-breakpoint) {
+        margin-bottom: -10px;
+      }
+
+      @media screen and (max-width: $small-breakpoint) {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+        border-left: none;
+        border-right: none;
+        @include horizontal-border;
+      }
+    }
+
+    .main-search__hike-filters {
+      //width: 80%;
+      display: inherit;
+      @media screen and (max-width: $large-breakpoint) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .react-autosuggest__container {
+      input {
+        height: 2.5em !important;
+      }
+    }
+  }
+}
+
+.mobileBlock {
+  display: inherit;
+  @media screen and (max-width: $medium-breakpoint) {
+    width: 100%;
+  }
+}
+
+.modifiedSelectStyle {
+  span {
+    color: black;
+    font-size: 0.9em;
+    padding-left: 0.45em;
+  }
+}
+
+.modifiedFieldStyle {
+ // padding: 0.5em 0;
+  margin-bottom: 0px !important;
+  width: 20%;
+  min-width: 342px;
+  display: inline-flex;
+  vertical-align: top;
+  padding: .35em;
+  padding-right: 0;
+
+  >div {
+    flex-grow: 10;
+  }
+
+  @media screen and (max-width: $large-breakpoint) {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+
+.modifiedCheckboxStyle {
+  display: inherit;
+  width: 160px;
+}
+
+.modifiedFieldBg {
+  background-color: #dbdada;
+}
+
+.poi-modal-toggle {
+  display: inherit;
+}
+
+.hideOnHomepage {
+  display: none;
+}
+
+.hideOnResults {
+  display: none !important;
+}
+
+// Non-BEM overrides
+
+.dropdown-arrow {
+  color: darkgray !important;
+}
+
+.Select-menu {
+  font-size: small;
+}
+
+.modifiedSelectStyle.is-open > .Select-control {
+  background-color: transparent !important;
+}
+
+.modifiedSelectStyle.is-focused:not(.is-open)>.Select-control {
+  box-shadow: none;
+}
+
+.result-page {
+  position: relative !important;
+  //padding-left: 3em !important;
+  //padding-right: 3em !important;
+  //margin-left: 0.5em !important;
+}

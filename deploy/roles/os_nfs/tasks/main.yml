@@ -1,0 +1,16 @@
+---
+  - name: configure rpc statd
+    become: yes
+    copy: src=statd dest=/etc/rc.conf.d/statd
+
+  - name: start statd
+    become: yes
+    service: name=statd state=started
+
+  - name: configure rpc lockd
+    become: yes
+    copy: src=lockd dest=/etc/rc.conf.d/lockd
+
+  - name: start lockd
+    become: yes
+    service: name=lockd state=started

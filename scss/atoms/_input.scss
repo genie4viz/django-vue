@@ -1,0 +1,734 @@
+//colors
+$black_87: rgba(0, 0, 0, 0.87);
+$white: #ffffff;
+$almost-white: #f0f0f0;
+$color_shark_15_approx: rgba(34, 36, 38, 0.15);
+$black_40: rgba(0, 0, 0, 0.4);
+$black_30: rgba(0, 0, 0, 0.3);
+$alabaster: #fafafa;
+$black_10: rgba(0, 0, 0, 0.1);
+$color_tapa_approx: #767676;
+$color_half_baked_approx: #85b7d9;
+$black_80: rgba(0, 0, 0, 0.8);
+$color_rose_white_approx: #fff6f6;
+$color_blossom_approx: #e0b4b4;
+$color_stiletto_approx: #9f3a38;
+$color_cavern_pink_approx: #e7bdbc;
+$color_petite_orchid_approx: #da9796;
+$white_50: rgba(255, 255, 255, 0.5); //fonts
+$font_0: Lato;
+$font_1: Helvetica Neue;
+$font_2: Arial;
+$font_3: Helvetica;
+$font_4: sans-serif; //@extend-elements
+//original selectors
+//.ui.input input:active, .ui.input.down input
+
+%extend_1 {
+	border-color: $black_30;
+	background: $alabaster;
+	color: $black_87;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+}
+//original selectors
+//.ui.input.focus input, .ui.input input:focus
+
+%extend_2 {
+	border-color: $color_half_baked_approx;
+	background: $white;
+	color: $black_80;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+}
+//original selectors
+//.ui.icon.input >i.icon:before, .ui.icon.input >i.icon:after
+
+%extend_3 {
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 100%;
+	margin-top: -0.5em;
+}
+//original selectors
+//.ui.action.input >.button, .ui.action.input >.buttons
+
+%extend_4 {
+	display: flex;
+	align-items: center;
+	flex: 0 0 auto;
+}
+//original selectors
+//.ui.action.input >.button, .ui.action.input >.buttons >.button
+
+%extend_5 {
+	padding-top: 0.78571429em;
+	padding-bottom: 0.78571429em;
+	margin: 0;
+}
+
+.ui {
+	&.input {
+		position: relative;
+		font-weight: normal;
+		font-style: normal;
+		display: inline-flex;
+		color: $black_87;
+		font-size: 1em;
+
+		input {
+			margin: 0;
+			max-width: 100%;
+			flex: 1 0 auto;
+			outline: none;
+			text-align: left;
+			line-height: 1.2142em;
+			font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+			padding: 0.67861429em 1em;
+			background: $white;
+			border: 1px solid $color_shark_15_approx;
+			color: $black_87;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 1.5rem;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: box-shadow 0.1s ease, border-color 0.1s ease;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+
+			&:active {
+				@extend %extend_1;
+			}
+
+			&:focus {
+				@extend %extend_2;
+			}
+
+			&:focus::-webkit-input-placeholder {
+				color: $black_87;
+			}
+
+			&:focus::-moz-placeholder {
+				color: $black_87;
+			}
+
+			&:focus::-ms-input-placeholder {
+				color: $black_87;
+			}
+		}
+
+		input::-webkit-input-placeholder {
+			color: $black_40;
+		}
+
+		input::-moz-placeholder {
+			color: $black_40;
+		}
+
+		input::-ms-input-placeholder {
+			color: $black_40;
+		}
+
+		input[disabled] {
+			opacity: 0.45;
+		}
+
+		&.focus {
+			input {
+				@extend %extend_2;
+			}
+
+			input::-webkit-input-placeholder {
+				color: $black_87;
+			}
+
+			input::-moz-placeholder {
+				color: $black_87;
+			}
+
+			input::-ms-input-placeholder {
+				color: $black_87;
+			}
+		}
+
+		&.error {
+			input {
+				background-color: $color_rose_white_approx;
+				border-color: $color_blossom_approx;
+				color: $color_stiletto_approx;
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: none;
+
+				&:focus::-webkit-input-placeholder {
+					color: $color_petite_orchid_approx;
+				}
+
+				&:focus::-moz-placeholder {
+					color: $color_petite_orchid_approx;
+				}
+
+				&:focus::-ms-input-placeholder {
+					color: $color_petite_orchid_approx;
+				}
+			}
+
+			input::-webkit-input-placeholder {
+				color: $color_cavern_pink_approx;
+			}
+
+			input::-moz-placeholder {
+				color: $color_cavern_pink_approx;
+			}
+
+			input::-ms-input-placeholder {
+				color: $color_cavern_pink_approx;
+			}
+		}
+
+		&.down input {
+			@extend %extend_1;
+		}
+
+		> .ui {
+			&.corner.label {
+				top: 1px;
+				right: 1px;
+			}
+
+			&.left.corner.label {
+				right: auto;
+				left: 1px;
+			}
+		}
+	}
+
+	&.transparent {
+		&.input input {
+			border-color: transparent !important;
+			background-color: transparent !important;
+			padding: 0 !important;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none !important;
+		}
+
+		&.icon.input {
+			> input {
+				padding-left: 0 !important;
+				padding-right: 2em !important;
+			}
+
+			> i.icon {
+				width: 1.1em;
+			}
+		}
+
+		&.inverted.input {
+			color: $white;
+
+			input {
+				color: inherit;
+			}
+
+			input::-webkit-input-placeholder {
+				color: $white_50;
+			}
+
+			input::-moz-placeholder {
+				color: $white_50;
+			}
+
+			input::-ms-input-placeholder {
+				color: $white_50;
+			}
+		}
+	}
+
+	&.disabled.input {
+		opacity: 0.45;
+
+		input {
+			pointer-events: none;
+		}
+	}
+
+	&.loading.loading.input > i.icon {
+		&:before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			margin: -0.64285714em 0 0 -0.64285714em;
+			width: 1.28571429em;
+			height: 1.28571429em;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 500rem;
+			border: 0.2em solid $black_10;
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			margin: -0.64285714em 0 0 -0.64285714em;
+			width: 1.28571429em;
+			height: 1.28571429em;
+			animation: button-spin 0.6s linear;
+			animation-iteration-count: infinite;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 500rem;
+			border-color: $color_tapa_approx transparent transparent;
+			border-style: solid;
+			border-width: 0.2em;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 0 1px transparent;
+		}
+	}
+
+	&.transparent[class*="left icon"].input > input {
+		padding-left: 2em !important;
+		padding-right: 0 !important;
+	}
+
+	&.icon.input {
+		> i {
+			&.icon {
+				cursor: default;
+				position: absolute;
+				line-height: 1;
+				text-align: center;
+				top: 0;
+				right: 0;
+				margin: 0;
+				height: 100%;
+				width: 2.67142857em;
+				opacity: 0.5;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0 1.5rem 1.5rem 0;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: opacity 0.3s ease;
+
+				&:before {
+					@extend %extend_3;
+				}
+
+				&:after {
+					@extend %extend_3;
+				}
+
+				&:not(.link) {
+					pointer-events: none;
+				}
+			}
+
+			&.link.icon {
+				cursor: pointer;
+			}
+
+			&.circular.icon {
+				top: 0.35em;
+				right: 0.5em;
+			}
+		}
+
+		input {
+			padding-right: 2.67142857em !important;
+		}
+
+		> input:focus ~ i.icon {
+			opacity: 1;
+		}
+	}
+
+	&.labeled.input {
+		> .label {
+			flex: 0 0 auto;
+			margin: 0;
+			font-size: 1em;
+
+			&:not(.corner) {
+				padding-top: 0.78571429em;
+				padding-bottom: 0.78571429em;
+			}
+		}
+
+		&:not([class*="corner labeled"]) .label:first-child {
+			//Instead of the line below you could use @include border-top-right-radius($radius)
+			border-top-right-radius: 0;
+			//Instead of the line below you could use @include border-bottom-right-radius($radius)
+			border-bottom-right-radius: 0;
+
+			+ input {
+				//Instead of the line below you could use @include border-top-left-radius($radius)
+				border-top-left-radius: 0;
+				//Instead of the line below you could use @include border-bottom-left-radius($radius)
+				border-bottom-left-radius: 0;
+				border-left-color: transparent;
+
+				&:focus {
+					border-left-color: $color_half_baked_approx;
+				}
+			}
+		}
+
+		.corner.label {
+			top: 1px;
+			right: 1px;
+			font-size: 0.64285714em;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0 1.5rem 0 0;
+		}
+	}
+
+	&.action.input {
+		> {
+			.button {
+				@extend %extend_4;
+				@extend %extend_5;
+			}
+
+			.buttons {
+				@extend %extend_4;
+
+				> .button {
+					@extend %extend_5;
+				}
+			}
+		}
+
+		&:not([class*="left action"]) {
+			> input {
+				//Instead of the line below you could use @include border-top-right-radius($radius)
+				border-top-right-radius: 0 !important;
+				//Instead of the line below you could use @include border-bottom-right-radius($radius)
+				border-bottom-right-radius: 0 !important;
+				border-right-color: transparent !important;
+			}
+
+			> {
+				.dropdown {
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 0;
+
+					&:last-child {
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 0 1.5rem 1.5rem 0;
+					}
+				}
+
+				.button {
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 0;
+
+					&:last-child {
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 0 1.5rem 1.5rem 0;
+					}
+				}
+
+				.buttons {
+					> .button {
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 0;
+					}
+
+					&:last-child > .button {
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 0 1.5rem 1.5rem 0;
+					}
+				}
+			}
+
+			input:focus {
+				border-right-color: $color_half_baked_approx !important;
+			}
+		}
+	}
+
+	&.inverted.input input {
+		border: none;
+	}
+
+	&.fluid.input {
+		display: flex;
+
+		> input {
+			width: 0 !important;
+		}
+	}
+
+	&.mini.input {
+		font-size: 0.71428571em;
+	}
+
+	&.small.input {
+		font-size: 0.92857143em;
+	}
+
+	&.large.input {
+		font-size: 1.14285714em;
+	}
+
+	&.big.input {
+		font-size: 1.28571429em;
+	}
+
+	&.huge.input {
+		font-size: 1.42857143em;
+	}
+
+	&.massive.input {
+		font-size: 1.71428571em;
+	}
+}
+
+.ui[class*="corner labeled"] {
+	&:not([class*="left corner labeled"]).labeled.input input {
+		padding-right: 2.5em !important;
+	}
+
+	&.icon.input:not([class*="left corner labeled"]) {
+		> input {
+			padding-right: 3.25em !important;
+		}
+
+		> .icon {
+			margin-right: 1.25em;
+		}
+	}
+}
+
+.ui[class*="left corner labeled"] {
+	&.labeled.input input {
+		padding-left: 2.5em !important;
+	}
+
+	&.icon.input {
+		> input {
+			padding-left: 3.25em !important;
+		}
+
+		> .icon {
+			margin-left: 1.25em;
+		}
+	}
+}
+
+.ui[class*="left icon"].input {
+	> i {
+		&.icon {
+			right: auto;
+			left: 1px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 1.5rem 0 0 1.5rem;
+		}
+
+		&.circular.icon {
+			right: auto;
+			left: 0.5em;
+		}
+	}
+
+	> input {
+		padding-left: 2.67142857em !important;
+		padding-right: 1em !important;
+	}
+}
+
+.ui[class*="right labeled"].input input {
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 0 !important;
+	//Instead of the line below you could use @include border-bottom-right-radius($radius)
+	border-bottom-right-radius: 0 !important;
+	border-right-color: transparent !important;
+
+	&:focus {
+		border-right-color: $color_half_baked_approx !important;
+	}
+
+	+ .label {
+		//Instead of the line below you could use @include border-top-left-radius($radius)
+		border-top-left-radius: 0;
+		//Instead of the line below you could use @include border-bottom-left-radius($radius)
+		border-bottom-left-radius: 0;
+	}
+}
+
+.ui[class*="left action"].input {
+	> input {
+		//Instead of the line below you could use @include border-top-left-radius($radius)
+		border-top-left-radius: 0 !important;
+		//Instead of the line below you could use @include border-bottom-left-radius($radius)
+		border-bottom-left-radius: 0 !important;
+		border-left-color: transparent !important;
+
+		&:focus {
+			border-left-color: $color_half_baked_approx !important;
+		}
+	}
+
+	> {
+		.dropdown {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+
+			&:first-child {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 1.5rem 0 0 1.5rem;
+			}
+		}
+
+		.button {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+
+			&:first-child {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 1.5rem 0 0 1.5rem;
+			}
+		}
+
+		.buttons {
+			> .button {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0;
+			}
+
+			&:first-child > .button {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 1.5rem 0 0 1.5rem;
+			}
+		}
+	}
+}
+//React autosuggest input
+
+.react-autosuggest__container--open .react-autosuggest__input {
+	border-radius: 1em;
+}
+
+.react-autosuggest__input {
+	width: 300px;
+	@include placeholder {
+		 @include transition(opacity 0.25s ease-in-out);
+		opacity: 1;
+	}
+
+	&.disappear {
+		@include placeholder {
+			 @include transition(opacity 0.25s ease-in-out);
+			opacity: 0;
+		}
+	}
+
+	&.once {
+		@include placeholder {
+			opacity: 1;
+		}
+	}
+}
+
+.react-autosuggest__suggestions-container {
+	position: absolute;
+	top: 2em;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	font-family: Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	z-index: 1000000000;
+}
+
+.react-autosuggest__suggestions-container--lower {
+	position: absolute;
+	top: em(62);
+}
+
+.react-autosuggest__suggestion {
+	cursor: pointer;
+	padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion:not(:first-child) {
+	border-top: 1px solid #ddd;
+}
+
+.react-autosuggest__suggestion--focused {
+	background-color: #0C7EAF;
+	color: #fff;
+}
+
+.suggestion-content {
+	display: flex;
+	align-items: center;
+	background-repeat: no-repeat;
+}
+
+.name {
+	margin-left: 68px;
+	line-height: 45px;
+}
+
+.highlight {
+	color: #ee0000;
+	font-weight: bold;
+}
+
+.react-autosuggest__suggestion--focused .highlight {
+	color: #120000;
+}
+
+.react-autosuggest__suggestion {
+	color: $black;
+	text-transform: capitalize;
+}
+
+.react-autosuggest__suggestions-container {
+	border-radius: 0.28571rem;
+	max-height: em(350);
+	overflow-y: auto;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	@include media($mobile) {
+		width: 100%;
+	}
+	@include media($tablet) {
+		width: 60vw;
+	}
+}
+
+.results-page {
+	.react-autosuggest__suggestions-container {
+		width: 100%;
+		top: 50px;
+
+		/* @media screen and (max-width: $large-breakpoint) {
+			top: 94px;
+		}
+
+		@media screen and (max-width: $medium-breakpoint) {
+			top: 139px;
+		}
+
+		@media screen and (max-width: $small-breakpoint) {
+			top: 299px;
+		} */
+	}
+}
+
+.react-autosuggest__suggestion--focused {
+	background-color: transparent;
+	color: $accent-color;
+}
+
+.react-autosuggest__section-title {
+	color: $black;
+	font-weight: bold;
+	margin-left: 1em;
+}

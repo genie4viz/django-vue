@@ -1,0 +1,47 @@
+---
+  - name: install postgis
+    become: yes
+    pkgng: name=postgis24
+
+  - name: create postgis template
+    become: yes
+    become_user: pgsql
+    postgresql_db: >
+      login_user=pgsql
+      name=template_postgis
+      state=present
+
+  - name: mark database as a template
+    become: yes
+    become_user: pgsql
+    command: "psql template_postgis -c \"UPDATE pg_database SET datistemplate='true' WHERE datname='template_postgis';\""
+
+  - name: enable postgis extension on template
+    become: yes
+    become_user: pgsql
+    command: "psql -d template_postgis -c \"CREATE EXTENSION IF NOT EXISTS postgis;\""
+
+  - name: enable hstore extension on template
+    become: yes
+    become_user: pgsql
+    command: "psql -d template_postgis -c \"CREATE EXTENSION IF NOT EXISTS hstore;\""
+
+  - name: grant public perms on geometry_columns
+    become: yes
+    become_user: pgsql
+    command: "psql -d template_postgis -c \"GRANT ALL ON geometry_columns TO PUBLIC;\""
+
+  - name: grant public perms on geography_columns
+    become: yes
+    become_user: pgsql
+    command: "psql -d template_postgis -c \"GRANT ALL ON geography_columns TO PUBLIC;\""
+
+  - name: grant public perms on spatial_ref_sys
+    become: yes
+    become_user: pgsql
+    command: "psql -d template_postgis -c \"GRANT ALL ON spatial_ref_sys TO PUBLIC;\""
+
+  - name: create unaccent extension
+    become: yes
+    become_user: pgsql
+    command: "psql -d template_postgis -c \"CREATE EXTENSION IF NOT EXISTS unaccent;\""

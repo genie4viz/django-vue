@@ -1,0 +1,18 @@
+{
+  "react-select": {
+    "baseAssetDir": "/Users/fbrousseau/Documents/Hikster/hiksterclientweb/node_modules/react-select/dist",
+    "assetLocationTranslation": {}
+  },
+  "pui-css-bootstrap": {
+    "baseAssetDir": "/Users/fbrousseau/Documents/Hikster/hiksterclientweb/node_modules/pui-css-bootstrap",
+    "assetLocationTranslation": {}
+  },
+  "pui-css-tabs": {
+    "baseAssetDir": "/Users/fbrousseau/Documents/Hikster/hiksterclientweb/node_modules/pui-css-tabs",
+    "assetLocationTranslation": {}
+  },
+  "pui-css-collapse": {
+    "baseAssetDir": "/Users/fbrousseau/Documents/Hikster/hiksterclientweb/node_modules/pui-css-collapse",
+    "assetLocationTranslation": {}
+  }
+}

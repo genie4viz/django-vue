@@ -1,0 +1,31 @@
+---
+- hosts: all
+  vars_files:
+    - vaults/dev.yml
+  vars:
+    ansible_python_interpreter: /usr/local/bin/python3.6
+    domain_name: dev.hikster.com
+    short_name: hikster
+    program_name: dev_website
+    app_database: hikster_api_dev
+    app_django_settings: hikster.settings.dev_website
+    app_git_version: feature/clean_snapping
+    app_git_repo: git@bitbucket.org:hikster/hikster.git
+  roles:
+     - os_updates
+     - os_devel
+     - os_nfs
+     - os_geoip_databases
+     - os_pgsql_install
+     - os_pgsql_start
+     - os_postgis_install
+     - os_supervisord
+     - os_nginx
+     # - os_redis
+     - pgsql_user
+     - pgsql_database_postgis
+     - app_dirs
+     - app_source
+     - pgsql_backup
+     - app_django
+     - svr_dev

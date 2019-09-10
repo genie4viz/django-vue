@@ -1,0 +1,40 @@
+---
+
+  - name: create install directory
+    become: yes
+    file: >
+      path={{ app_install_dir }}
+      state=directory
+      owner={{ ansible_ssh_user }}
+
+  - name: create conf directory
+    file: >
+      path={{ app_install_dir }}/conf
+      state=directory
+
+  - name: create logs directory
+    become: yes
+    file: >
+      path={{ app_install_dir }}/logs
+      state=directory
+      owner={{ ansible_ssh_user }}
+      group=www
+      mode=0775
+
+  - name: create var directory
+    file: >
+      path={{ app_install_dir }}/var
+      state=directory
+
+  - name: create public directory
+    file: >
+      path={{ app_install_dir }}/public
+      state=directory
+
+#  - name: create media directory
+#    become: yes
+#    file: >
+#      path={{ app_install_dir }}/public/media
+#      state=directory
+#      owner=www
+#      group=www

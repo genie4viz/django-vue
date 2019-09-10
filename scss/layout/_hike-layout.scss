@@ -1,0 +1,68 @@
+@import "layout";
+
+.section-padding {
+  padding: em(30) em(10);
+}
+
+.wrapper {
+  .hike-page {
+    .gallery,
+    // .hike-about,
+    .hike-detail,
+    .hike-detail__stats,
+    .hike-header,
+    .hike-fauna,
+    .hike-info,
+    .hike-rating,
+    .hike-sporttypes,
+    .pagenav,
+    .info-page {
+      @include media($mobile) {
+        max-width: 100vw;
+      }
+      @include media($tablet) {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 65vw;
+      }
+    }
+
+    #distance {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .hike-about {
+      background-color: #f0f0f0;
+    }
+
+    // .hike-about > *,
+    // .hike-detail > *,
+    .hike-rating > * {
+      @include media($mobile) {
+        width: 100%;
+      }
+      @include media($tablet) {
+        width: 65%;
+      }
+    }
+
+    #map {
+      display: block;
+      height: em(800);
+    }
+  }
+
+  .hike-map {
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(center);
+  }
+
+  .gallery,
+  .hide-info,
+  .info-page {
+    @extend .section-padding;
+  }
+
+}

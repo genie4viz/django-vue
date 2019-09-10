@@ -1,0 +1,38 @@
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    &+label {
+        max-width: fit-content;
+        font-size: 1.25rem;
+        /* 20px */
+        font-weight: 700;
+        //text-overflow: ellipsis;
+        cursor: pointer;
+        padding-right: em(10);
+        /* 10px 20px */
+        svg {
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+            fill: currentColor;
+            margin-top: -0.25em;
+            /* 4px */
+            margin-right: 0.25em;
+            /* 4px */
+        }
+    }
+    &:focus+label {
+        outline: 1px dotted $accent-color;
+    }
+    &--1+label {
+        color: $accent-color !important;
+    }
+    &--1:focus+label,
+    &--1+label:hover {
+        color: darken($accent-color, 20%) !important;
+    }
+}

@@ -1,0 +1,24 @@
+---
+  - name: install root ca certs
+    become: yes
+    pkgng: name=ca_root_nss state=present
+
+  - name: install scm
+    become: yes
+    pkgng: name=git,mercurial,subversion state=present
+
+  - name: install graphics libraries
+    become: yes
+    pkgng: name=jpeg-turbo,png,gdal state=present
+
+  - name: install xml libraries
+    become: yes
+    pkgng: name=libxml2,libxslt state=present
+
+  - name: install development tools
+    become: yes
+    pkgng: name=gmake,gtar,bash
+
+#  - name: set vagrant user shell
+#    become: yes
+#    command: "chsh -s /usr/local/bin/bash vagrant"

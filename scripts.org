@@ -1,0 +1,186 @@
+* Copy media files
+  #+begin_src bash
+    sudo cp -r api.prod.hikster.com/public/media api.dev.hikster.com/public/media
+  #+end_src
+  
+* Set activities from old trailsection
+  #+begin_src sql
+    INSERT INTO hike_trailsectionactivity (trail_section_id, activity_id) SELECT trailsection_id, activities FROM hike_trailsection WHERE activities is not null ON CONFLICT DO NOTHING;
+  #+end_src
+
+* Drop constraints on trails
+  #+begin_src sql
+    ALTER TABLE user_trailadmin_hikes DROP CONSTRAINT user_trailadmin_hikes_trail_id_cb45f0ed_fk_hike_trail_trail_id;
+  #+end_src
+
+* Backup prod database
+  #+begin_src sql
+    -- 1. Rename last backup first
+    REVOKE CONNECT ON DATABASE prod_backup FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname='prod_backup' AND pid <> pg_backend_pid();
+    alter database prod_backup rename to prod_backup_2;
+    GRANT CONNECT ON DATABASE prod_backup TO public;
+
+    -- 2. Create new backup
+    REVOKE CONNECT ON DATABASE hikster_api_prod FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname='hikster_api_prod' AND pid <> pg_backend_pid();
+    create database prod_backup with template hikster_api_prod;
+    GRANT CONNECT ON DATABASE hikster_api_prod TO public;
+
+
+    REVOKE CONNECT ON DATABASE hikster_api_dev FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname='hikster_api_dev' AND pid <> pg_backend_pid();
+    create database hikster_api_prod with template hikster_api_dev;
+    GRANT CONNECT ON DATABASE hikster_api_dev TO public;
+
+    alter table elevation1 owner to hikster_api_prod;
+    alter table hike_trailstep owner to hikster_api_prod;
+    alter table hike_trailstep_id_seq owner to hikster_api_prod;
+    alter table lines owner to hikster_api_prod;
+  #+end_src
+
+* Dump mnt tiles
+  #+begin_src bash
+    raster2pgsql -c -e -I -M -t 100x100 first.tif mnt | psql -d prod_backup_2 -U hikster_api_prod
+    raster2pgsql -a -e -I -M -t 100x100 n02/*.tif mnt | psql -d prod_backup_2 -U hikster_api_prod
+    raster2pgsql -a -e -I -M -t 100x100 n05/*.tif mnt | psql -d prod_backup_2 -U hikster_api_prod
+  #+end_src
+
+* Insert event trailsection for testing
+  #+begin_src sql
+    delete from hike_eventtrailsection where evnt=59156;
+    insert into hike_eventtrailsection (trailsection, start_position, end_position, evnt) values (205343, 0.8674198319769646, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (207717, 1, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (207710, 1, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (207715, 1, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (207712, 1, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (207703, 1, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (207711, 1, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (205985, 1, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (205985, 0.26690671877707545, 0, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (208024, 0, 1, 59156);
+    insert into hike_eventtrailsection (trailsection, start_jk, end_position, evnt) values (205481, 1, 0, 59156);
+  #+end_src
+
+*hikster_api_prod Copy database to another db 
+  #+begin_src sql
+    REVOKE CONNECT ON DATABASE hikster_api_prod FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = current_database() AND pid <> pg_backend_pid();
+    create database hikster_dev with template hikster_api_prod;
+    GRANT CONNECT ON DATABASE hikster_api_prod TO public;
+  #+end_src
+  
+* Rename database
+  #+begin_src sql
+    REVOKE CONNECT ON DATABASE prod_backup FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = current_database() AND pid <> pg_backend_pid();
+    alter database prod_backup rename to hikster_api_prod;
+    GRANT CONNECT ON DATABASE hikster_api_prod TO public;
+
+    REVOKE CONNECT ON DATABASE hikster_api_prod FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = current_database() AND pid <> pg_backend_pid();
+    alter database hikster_api_prod rename to prod_old_2;
+    GRANT CONNECT ON DATABASE prod_old_2 TO public;
+  #+end_src
+
+* Extras
+  #+begin_src sql
+    REVOKE CONNECT ON DATABASE dev_backup FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = current_database() AND pid <> pg_backend_pid();
+    alter database dev_backup rename to hikster_api_dev;
+
+
+    REVOKE CONNECT ON DATABASE prod_backup FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = current_database() AND pid <> pg_backend_pid();
+    create database prod_backup_2 with template prod_backup;
+    GRANT CONNECT ON DATABASE prod_backup TO public;
+
+
+    REVOKE CONNECT ON DATABASE prod_backup_2 FROM public;
+    SELECT pid, pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = current_database() AND pid <> pg_backend_pid();
+    create database dev_backup with template prod_backup_2;
+    GRANT CONNECT ON DATABASE prod_backup_2 TO public;
+
+
+
+    SELECT ft_elevation_infos(shape, 25) into elevation from hike_event where event_id=59140;
+    SELECT ft_elevation_infos(shape_2d, 25) from hike_trailsection where trailsection_id=208591;
+    SELECT q.* from (select ft_drape_line(shape, 25) from hike_event where event_id=59140) q;
+    SELECT ST_GeometryType(shape) from hike_event where event_id=59140;
+    SELECT ST_Length2D(shape_2d) from hike_event where event_id=59140;
+    SELECT ST_ZMin(shape) from hike_event where event_id=59140;
+    SELECT ST_ZMax(shape) from hike_event where event_id=59140;
+
+
+    SELECT ST_Value(rast, 1, shape)::integer from mnt join hike_event on event_id=59140 WHERE ST_Intersects(rast, shape);
+
+
+    select ft_drape_line(shape, 25) into lines from hike_event where event_id=59140;
+    select ft_smooth_line(shape, 25) from hike_event where event_id=59140
+
+    update hike_trailsection ht set shape_2d=c.shape_2d from hike_trailsection c WHERE c.trailsection_id=208644 and ht.trailsection_id=208589;
+
+    update hike_event ht set shape_2d=c.shape_2d from hike_event c WHERE c.event_id=59136 and ht.event_id=59140;
+
+    -- // Set shape_2d of trail
+    update hike_trail ht set shape_2d=ST_Force2d(ot.shape) from hike_trail ot where ot.trail_id=ht.trail_id and ht.shape_2d is null;
+
+
+    -- // Create event from trail
+    INSERT INTO hike_event(deleted, e_offset, kind, event_id, exist_before, shape_2d) SELECT False, 0, '', trail_id, False, shape_2d from hike_trail where trail_id not in (select event_id from hike_event) and shape_2d is not null;
+
+    SELECT ft_elevation_infos(shape_2d, 1) from hike_event where event_id=57439;
+
+    update hike_event he set shape_2d=ce.shape_2d from hike_event ce where ce.event_id=57839 and he.event_id=57439;
+  #+end_src
+
+* Copy trail shape to event 
+  #+begin_src python
+    from django.contrib.gis.geos import GEOSGeometry, WKTWriter
+
+    from hikster.hike.models import Event, Trail
+    from hikster.organizations.models import Organization
+
+
+    def convert(shape_3d):
+        wkt_w = WKTWriter()
+        wkt_w.outdim = 2
+        temp = wkt_w.write(shape_3d)
+        return GEOSGeometry(temp)
+
+
+    org = Organization.objects.get(id=613)
+    prod_org = Organization.objects.using("prod").get(id=613)
+
+    for prod_trail in Trail.objects.using("prod").filter(shape__isnull=False, location_id=6129):
+        try:
+            trail = Trail.objects.get(name__iexact=prod_trail.name)
+            event = Event.objects.get(event_id=trail.trail_id)
+            event.shape_2d = convert(prod_trail.shape)
+            event.shape = prod_trail.shape
+            event.save()
+            print(event)
+        except (Trail.DoesNotExist, Trail.MultipleObjectsReturned):
+            pass
+
+
+    Event.objects.filter(event_id__in=org.trails)
+  #+end_src
+  
+* Update trailsection lgth
+  #+begin_src sql
+    update hike_trailsection set lgth=ST_3DLength(ST_Transform(shape, 32618)) where shape is not null;
+  #+end_src
+* Update POI Category
+  #+begin_src python
+    from django.db.models import Subquery, OuterRef
+    from hikster.location.models import PointOfInterest, PointOfInterestType
+
+    category = PointOfInterestType.objects.filter(
+        id=OuterRef('type_id')
+    ).values_list(
+        'category'
+    )[:1]
+
+    PointOfInterest.objects.update(category=Subquery(category))
+  #+end_src

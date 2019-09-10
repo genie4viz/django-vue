@@ -1,0 +1,16 @@
+---
+  - name: create database
+    become: yes
+    postgresql_db: >
+      login_user={{ database_admin_user }}
+      login_password={{ database_admin_password }}
+      login_host={{ database_host }}
+      name={{ app_database }}
+      owner={{ app_database_user }}
+      state=present
+
+  - name: create pgpass file
+    template: >
+      src=pgpass
+      dest=~/.pgpass
+      mode=0700

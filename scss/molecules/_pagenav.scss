@@ -1,0 +1,35 @@
+.pagenav {
+      width: 100%;
+      font-size: 12px;
+
+          ul {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid #dbdada;
+          }
+
+          li {
+            display: inline-block;
+            margin: 0 auto;
+          }
+
+          a{
+            color: black;
+            :hover {
+              text-decoration: underline;
+              font-weight: bold;
+              color: #5f933c;
+              cursor: pointer;
+            }
+          }
+
+
+    .activePagenavItem {
+      color: #5f933c;
+      font-weight: bold;
+    }
+}

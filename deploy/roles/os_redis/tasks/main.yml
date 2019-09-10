@@ -1,0 +1,18 @@
+---
+  - name: install redis
+    become: yes
+    pkgng: name=redis state=present
+
+  - name: copy redis configuration
+    become: yes
+    copy: src=redis.conf dest=/usr/local/etc/redis.conf backup=yes
+    notify:
+      - restart redis
+
+  - name: install redis start-up configuration
+    become: yes
+    copy: src=redis dest=/etc/rc.conf.d/redis
+
+  - name: start redis
+    become: yes
+    service: name=redis state=started

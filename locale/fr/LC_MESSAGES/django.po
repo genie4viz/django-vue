@@ -1,0 +1,1534 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-12 22:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: hikster/settings/base.py:120
+msgid "English"
+msgstr ""
+
+#: hikster/settings/base.py:120
+msgid "French"
+msgstr ""
+
+#: hikster/templates/404.html:7 hikster/templates/404.html:20
+msgid "Error 404"
+msgstr "Erreur 404"
+
+#: hikster/templates/hikster-admin/base.html:5
+#: hikster/templates/hikster-admin/base_authenticated.html:9
+#: hikster/templates/hikster-admin/base_sidebar_authenticated.html:6
+#: hikster/templates/hikster-admin/location-detail.html:8
+msgid "Hikster Admin"
+msgstr "Hikster Admin"
+
+#: hikster/templates/hikster-admin/base_sidebar_authenticated.html:18
+msgid "Profile"
+msgstr "Profil"
+
+#: hikster/templates/hikster-admin/base_sidebar_authenticated.html:22
+msgid "Locations"
+msgstr "Lieux"
+
+#: hikster/templates/hikster-admin/base_sidebar_authenticated.html:26
+msgid "Trail Sections"
+msgstr "Tronçons"
+
+#: hikster/templates/hikster-admin/base_sidebar_authenticated.html:30
+msgid "Trails"
+msgstr "Sentiers"
+
+#: hikster/templates/hikster-admin/include/navbar.html:25
+#: hikster/templates/website/core/toc.html:7
+#: hikster/templates/website/core/toc.html:18
+#: hikster/templates/website/footer.html:18
+msgid "Terms of use"
+msgstr "Conditions d'utilisation"
+
+#: hikster/templates/hikster-admin/include/navbar.html:31
+msgid "Logout"
+msgstr "Se déconnecter"
+
+#: hikster/templates/hikster-admin/index.html:7
+msgid "Select the organization you would like to manage:"
+msgstr "Selectionnez une organisation"
+
+#: hikster/templates/hikster-admin/index.html:12
+msgid "You do not have any organization."
+msgstr "Votre compte n'est associé à aucune organisation."
+
+#: hikster/templates/hikster-admin/location-detail.html:26
+#, fuzzy
+#| msgid "Organization"
+msgid "Modify location"
+msgstr "Organisation"
+
+#: hikster/templates/hikster-admin/location-detail.html:31
+#: hikster/templates/hikster-admin/location-list.html:29
+#: hikster/templates/website/components/locations/trails.html:43
+msgid "Name"
+msgstr "Nom"
+
+#: hikster/templates/hikster-admin/location-detail.html:45
+#: hikster/templates/hikster-admin/organization.html:50
+msgid "Street name"
+msgstr "Rue"
+
+#: hikster/templates/hikster-admin/location-detail.html:55
+#: hikster/templates/hikster-admin/organization.html:60
+msgid "Apartment"
+msgstr "Complément"
+
+#: hikster/templates/hikster-admin/location-detail.html:65
+#: hikster/templates/hikster-admin/organization.html:70
+msgid "City"
+msgstr "Ville"
+
+#: hikster/templates/hikster-admin/location-detail.html:75
+#: hikster/templates/hikster-admin/organization.html:80
+msgid "Province"
+msgstr "Province ou État"
+
+#: hikster/templates/hikster-admin/location-detail.html:85
+#: hikster/templates/hikster-admin/organization.html:90
+msgid "Postal code"
+msgstr "Code postal"
+
+#: hikster/templates/hikster-admin/location-detail.html:95
+#: hikster/templates/hikster-admin/organization.html:100
+msgid "Po box"
+msgstr "Boite postale"
+
+#: hikster/templates/hikster-admin/location-detail.html:105
+#: hikster/templates/hikster-admin/organization.html:110
+msgid "Country"
+msgstr "Pays"
+
+#: hikster/templates/hikster-admin/location-detail.html:115
+#: hikster/templates/hikster-admin/organization.html:35
+msgid "Contact"
+msgstr ""
+
+#: hikster/templates/hikster-admin/location-detail.html:119
+#: hikster/templates/website/components/search/search-form.html:82
+#: hikster/templates/website/hike/trail-detail.html:71
+msgid "Type"
+msgstr "Type"
+
+#: hikster/templates/hikster-admin/location-detail.html:129
+msgid "Value"
+msgstr "Valeur"
+
+#: hikster/templates/hikster-admin/location-detail.html:152
+#, fuzzy
+#| msgid "hiking places"
+msgid "Living Rules"
+msgstr "lieux de pratique"
+
+#: hikster/templates/hikster-admin/location-detail.html:162
+msgid "Fare note"
+msgstr "Tarifs"
+
+#: hikster/templates/hikster-admin/location-detail.html:172
+#, fuzzy
+#| msgid "Locations"
+msgid "Description"
+msgstr "Locations"
+
+#: hikster/templates/hikster-admin/location-detail.html:190
+msgid "Save and continue editing"
+msgstr "Sauvegarder et continuer la modification"
+
+#: hikster/templates/hikster-admin/location-detail.html:198
+#: hikster/templates/hikster-admin/organization.html:183
+msgid "Save"
+msgstr "Sauvegarder"
+
+#: hikster/templates/hikster-admin/location-list.html:30
+#, fuzzy
+#| msgid "Name"
+msgid "Last modified"
+msgstr "Nom"
+
+#: hikster/templates/hikster-admin/location-list.html:31
+msgid "Online"
+msgstr "En ligne"
+
+#: hikster/templates/hikster-admin/login.html:10
+#: hikster/templates/hikster-admin/login.html:18
+msgid "Login"
+msgstr "Login"
+
+#: hikster/templates/hikster-admin/organization.html:12
+#, fuzzy
+#| msgid "Organization"
+msgid "Modify organization"
+msgstr "Organisation"
+
+#: hikster/templates/hikster-admin/organization.html:16
+msgid "Organization"
+msgstr "Organisation"
+
+#: hikster/templates/hikster-admin/organization.html:46
+msgid "Address"
+msgstr "Adresse"
+
+#: hikster/templates/hikster-admin/organization.html:120
+msgid "First Name"
+msgstr "Prénom"
+
+#: hikster/templates/hikster-admin/organization.html:135
+#, fuzzy
+#| msgid "Name"
+msgid "Last Name"
+msgstr "Nom"
+
+#: hikster/templates/hikster-admin/organization.html:150
+#: hikster/utils/models.py:106
+msgid "Email"
+msgstr ""
+
+#: hikster/templates/hikster-admin/organization.html:175
+msgid "Cancel"
+msgstr "Annuler"
+
+#: hikster/templates/index.html:11 hikster/templates/website/index.html:11
+msgid "The largest selection of hiking trails in Quebec. Find your playground."
+msgstr ""
+"Le plus grand répertoire de sentiers de randonnée pédestre au Québec. "
+"Trouvez votre terrain de jeu."
+
+#: hikster/templates/website/components/core/search-form.html:14
+msgid "Search for a location"
+msgstr "Chercher un sentier, parc, région"
+
+#: hikster/templates/website/components/core/search-form.html:46
+msgid "Region"
+msgstr "Région"
+
+#: hikster/templates/website/components/core/search-form.html:100
+#: hikster/templates/website/components/search/search-form.html:105
+msgid "With my dog"
+msgstr "Mon chien m'accompagne"
+
+#: hikster/templates/website/components/core/search-form.html:107
+msgid "Search / See the map"
+msgstr "Rechercher / voir la carte"
+
+#: hikster/templates/website/components/gallery.html:4
+msgid "Images"
+msgstr "Images"
+
+#: hikster/templates/website/components/gallery.html:6
+msgid "Gallery of images"
+msgstr "Gallerie d'images"
+
+#: hikster/templates/website/components/header.html:13
+#: hikster/templates/website/footer.html:19
+msgid "Make a donation"
+msgstr "Faire un don"
+
+#: hikster/templates/website/components/header.html:16
+#: hikster/templates/website/footer.html:20
+msgid "Ask a question to the community"
+msgstr "Se connecter à la communauté"
+
+#: hikster/templates/website/components/locations/trails.html:3
+msgid "List of trails"
+msgstr "Liste des sentiers"
+
+#: hikster/templates/website/components/locations/trails.html:44
+#: hikster/templates/website/components/search/results-container.html:33
+#: hikster/templates/website/hike/trail-detail.html:63
+#: hikster/templates/website/hike/trail-detail.html:75
+msgid "Distance"
+msgstr "Distance"
+
+#: hikster/templates/website/components/locations/trails.html:45
+msgid "Path type"
+msgstr "Type"
+
+#: hikster/templates/website/components/locations/trails.html:46
+msgid "Available sports"
+msgstr "Activités disponibles"
+
+#: hikster/templates/website/components/map-scripts.html:42
+#: hikster/templates/website/components/search/results-container.html:57
+msgid "Network"
+msgstr "Réseau"
+
+#: hikster/templates/website/components/map-scripts.html:45
+msgid "Location"
+msgstr "Lieux"
+
+#: hikster/templates/website/components/map-scripts.html:47
+#: hikster/templates/website/components/search/results-container.html:49
+msgid "Path"
+msgstr "Sentier"
+
+#: hikster/templates/website/components/map-scripts.html:49
+#, fuzzy
+#| msgid "Trails"
+msgid "See details"
+msgstr "Sentiers"
+
+#: hikster/templates/website/components/map.html:4
+#: hikster/templates/website/search/result-page.html:41
+msgid "Map"
+msgstr "Carte"
+
+#: hikster/templates/website/components/search/poi-filter.html:5
+msgid "Filter POIs"
+msgstr "Filtrer POI"
+
+#: hikster/templates/website/components/search/poi-filter.html:43
+msgid "Select all"
+msgstr "Tout sélectionner"
+
+#: hikster/templates/website/components/search/results-container.html:10
+msgid "Sorry, it looks like we have no result here."
+msgstr "Désolé, il n'y a aucun résultat."
+
+#: hikster/templates/website/components/search/results-container.html:12
+msgid "Please empty your filter or make a new search by moving the map."
+msgstr ""
+"SVP, videz les filtres ou faire une nouvelle recherche en déplaçant la carte."
+
+#: hikster/templates/website/components/search/results-container.html:29
+#, fuzzy
+#| msgid "Locations"
+msgid "Duration"
+msgstr "Locations"
+
+#: hikster/templates/website/components/search/results-container.html:37
+#: hikster/templates/website/components/search/results-container.html:41
+#: hikster/templates/website/hike/trail-detail.html:79
+#: hikster/templates/website/hike/trail-detail.html:87
+msgid "Elevation"
+msgstr "Elevation"
+
+#: hikster/templates/website/components/search/search-form.html:16
+msgid "Look for a place"
+msgstr "Recherchez un lieu"
+
+#: hikster/templates/website/components/search/search-form.html:27
+msgid "Search"
+msgstr "Chercher"
+
+#: hikster/templates/website/components/search/search-form.html:73
+msgid "Length"
+msgstr "Longueur"
+
+#: hikster/templates/website/components/search/search-form.html:89
+#: hikster/templates/website/hike/trail-detail.html:128
+msgid "Difficulty"
+msgstr "Difficulté"
+
+#: hikster/templates/website/core/about.html:7
+#: hikster/templates/website/core/about.html:18
+#: hikster/templates/website/footer.html:17
+msgid "About us"
+msgstr "À propos de nous"
+
+#: hikster/templates/website/core/about.html:30
+msgid "MANAGE AND VALUE YOUR TRAILS AND TOURIST ACTIVITIES"
+msgstr "GÉREZ ET VALORISEZ VOS SENTIERS ET ACTIVITÉS TOURISTIQUES"
+
+#: hikster/templates/website/core/about.html:34
+msgid ""
+"\n"
+"                Hikster is a webmapping software suite whose goal is to "
+"connect park managers and visitors in order to propel outdoor activities.\n"
+"                "
+msgstr ""
+"\n"
+"Hikster est une suite logicielle webmapping dont le but est de connecter les "
+"gestionnaires de parcs et les visiteurs afin de propulser les activités de "
+"plein air.\n"
+"                "
+
+#: hikster/templates/website/core/about.html:39
+msgid ""
+"\n"
+"                 Park managers have advanced tools allowing - for the first "
+"time - to enhance their offer and to better understand the behavior of "
+"visitors. They can create new personalized experiences, improve park "
+"management and increase their revenues.\n"
+"                "
+msgstr ""
+"\n"
+"Les responsables de parc disposent d'outils avancés leur permettant - pour "
+"la première fois - de valoriser leur offre et de mieux comprendre le "
+"comportement des visiteurs. Ils peuvent créer de nouvelles expériences "
+"personnalisées, améliorer la gestion du parc et augmenter leurs revenus.\n"
+"  "
+
+#: hikster/templates/website/core/about.html:44
+msgid ""
+"\n"
+"                 Visitors have interactive maps, easy to use, in order to "
+"take full advantage of the park's offer. These Maps are accessible via the "
+"web and via mobile application.\n"
+"                "
+msgstr ""
+"\n"
+"Les visiteurs disposent de cartes interactives, facile à utiliser, afin de "
+"profiter pleinement de l'offre du parc. Ces cartes sont accessibles via le "
+"web et via application mobile.\n"
+" "
+
+#: hikster/templates/website/core/about.html:49
+msgid "ESSENTIAL MEMBERS"
+msgstr "MEMBRES ESSENTIELS"
+
+#: hikster/templates/website/core/about.html:51
+msgid ""
+"\n"
+"                By becoming an Essential member, you stay on an interface of "
+"management for your park. You are masters of your information and all "
+"updates are instant visible by the public on our website and mobile "
+"application.\n"
+"                "
+msgstr ""
+"\n"
+"En devenant membre Essentiel, vous disposez d'une interface de gestion pour "
+"votre parc. Vous êtes maître de votre information et toutes les mises à jour "
+"sont instantanément visibles par le public sur notre site Internet et "
+"application mobile.\n"
+" "
+
+#: hikster/templates/website/core/about.html:56
+msgid "For more information contact us"
+msgstr "Pour en savoir plus, contactez-nous"
+
+#: hikster/templates/website/core/about.html:60
+msgid "PREMIUM MEMBERS"
+msgstr "MEMBRES PREMIUM"
+
+#: hikster/templates/website/core/about.html:62
+msgid ""
+"\n"
+"                Do you want a tailor-made offer? Use our tools in White "
+"mark ? Our team of experts is at your disposal.\n"
+"                "
+msgstr ""
+"\n"
+"Vous souhaitez une offre sur-mesure ? Utiliser nos outils en marque "
+"blanche ? Notre équipe d'experts est à votre écoute.\n"
+" "
+
+#: hikster/templates/website/core/about.html:77
+msgid "THE KNOW-HOW OF THE AZIMUT GEOMATICS GROUP"
+msgstr "LE SAVOIR-FAIRE DU GROUPE DE GÉOMATIQUE AZIMUT"
+
+#: hikster/templates/website/core/about.html:81
+msgid ""
+"\n"
+"                The realization of the Hikster project was made possible "
+"thanks to the unconditional support of the team of\n"
+"                "
+msgstr ""
+"\n"
+"La concrétisation du projet Hikster a été possible grâce à l'appui "
+"inconditionnel de l'équipe de\n"
+" "
+
+#: hikster/templates/website/core/about.html:85
+msgid "AZIMUT Geomatics Group."
+msgstr "Groupe de géomatique AZIMUT."
+
+#: hikster/templates/website/core/about.html:87
+msgid ""
+"\n"
+"                The website, the interactive map and all the data are the "
+"result of the work of these professionals of computer science and geomatics "
+"who have accompanied us throughout the adventure. We are grateful to them "
+"and we thank them!\n"
+"                "
+msgstr ""
+"\n"
+"Le site Web, la carte interactive et toutes les données sont le fruit du "
+"travail de ces professionnels de l'informatique et de la géomatique qui nous "
+"ont accompagnés tout au long de l'aventure. Nous leur en sommes "
+"reconnaissants et nous les en remercions!\n"
+" "
+
+#: hikster/templates/website/core/about.html:101
+msgid "SUPPORTED BY Osprey"
+msgstr "SOUTENU PAR Osprey"
+
+#: hikster/templates/website/core/about.html:107
+msgid ""
+"\n"
+"                makes the manufacturing quality of its backpacks a priority. "
+"We have the honor to be recognized and supported by this actor of reference "
+"in the field of the outdoors. We will have the opportunity to win bags "
+"throughout the year.\n"
+"                "
+msgstr ""
+"\n"
+"fait de la qualité de fabrication de ses sacs à dos une priorité. Nous avons "
+"l'honneur d'être reconnu et soutenu par cet acteur de référence dans le "
+"domaine du plein air. \n"
+" "
+
+#: hikster/templates/website/core/about.html:112
+msgid ""
+"\n"
+"                \"Founded in 1974 and established in Colorado, Osprey's "
+"mission is to create innovative, high-performance equipment that reflects "
+"our love of adventure and our dedication to the outdoors. . We achieve our "
+"goal when we meet the needs of our most demanding consumers and they carry "
+"our bags with pride. \"\n"
+"                "
+msgstr ""
+"\n"
+"\"Fondée en 1974 et établie au Colorado, Osprey a pour mission de créer des "
+"équipements innovants et de hautes performances qui reflètent notre amour "
+"pour l'aventure et notre dévotion pour le plein air. Nous atteignons notre "
+"objectif lorsque nous répondons aux besoins de nos consommateurs les plus "
+"exigeants et qu'ils portent nos sacs avec fierté.\"\n"
+" "
+
+#: hikster/templates/website/core/about.html:126
+msgid "PROMOTED BY ESPACES"
+msgstr "PROMU PAR ESPACES"
+
+#: hikster/templates/website/core/about.html:132
+msgid ""
+"\n"
+"                is the largest outdoor media in Quebec. Their mission: to "
+"offer outdoor, adventure and travel enthusiasts, media and events that "
+"actively contribute to the realization of their interests.\n"
+"                "
+msgstr ""
+"\n"
+"est le plus important média de plein air au Québec. Leur mission: proposer "
+"aux adeptes d'activités de plein air, d'aventure et de voyages, des médias "
+"et des événements qui contribuent activement à la réalisation de leurs "
+"intérêts.\n"
+" "
+
+#: hikster/templates/website/core/about.html:137
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                ESPACES magazine is available on several platforms "
+#| "including tablets, the web and in paper version, and this free for more "
+#| "than 20 years.\n"
+#| "                "
+msgid ""
+"\n"
+"                ESPACES magazine is available on several platforms including "
+"tablets, web and paper version, for free for more than 20 years.\n"
+"                "
+msgstr ""
+"\n"
+"Le magazine ESPACES est disponible sur plusieurs plateformes incluant les "
+"tablettes, le web et en version papier, et ce gratuitement depuis plus de 20 "
+"ans.\n"
+" "
+
+#: hikster/templates/website/core/about.html:142
+msgid ""
+"\n"
+"                We are happy that they participate in the promotion of "
+"Hikster.\n"
+"                "
+msgstr ""
+"\n"
+"Nous sommes heureux qu'ils participent à la promotion de Hikster.\n"
+" "
+
+#: hikster/templates/website/core/about.html:160
+msgid "SUPPORTED BY THE MONTREAL FOUNDATION INC."
+msgstr "SOUTENU PAR LA FONDATION MONTRÉAL INC."
+
+#: hikster/templates/website/core/about.html:164
+msgid "Hikster is a proud laureate of"
+msgstr "Hikster est heureux lauréat de"
+
+#: hikster/templates/website/core/about.html:166
+msgid "The Montreal Foundation Inc.,"
+msgstr "La Fondation Montréal Inc.,"
+
+#: hikster/templates/website/core/about.html:168
+msgid ""
+"\n"
+"                a non-profit organization whose mission is to propel a new "
+"generation of promising Montreal entrepreneurs to success.\n"
+"                "
+msgstr ""
+"\n"
+"organisme à but non lucratif qui a pour mission de propulser vers le succès "
+"une nouvelle génération d'entrepreneurs montréalais prometteurs.\n"
+" "
+
+#: hikster/templates/website/core/about.html:173
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                Thanks to the foundation, we have access to the expertise "
+#| "of many experienced business people: An incredible opportunity for our "
+#| "company in the beginning! We warmly thank the foundation for the support "
+#| "provided and to believe in our beautiful project!\n"
+#| "                "
+msgid ""
+"\n"
+"                Thanks to the foundation, we have access to the expertise of "
+"many experienced business people: An incredible opportunity for our startup. "
+"We warmly thank the foundation for the support provided and for believing in "
+"our beautiful project!\n"
+"                "
+msgstr ""
+"\n"
+"Grâce à la fondation, nous accédons à l'expertise de nombreux gens "
+"d'affaires chevronnés : Une opportunité inouie pour notre entreprise en "
+"démarrage! Nous remercions vivement la fondation pour le soutien apporté et "
+"pour croire en notre beau projet!\n"
+" "
+
+#: hikster/templates/website/core/home.html:8
+#, fuzzy
+#| msgid "Hikster Admin"
+msgid "Hikster"
+msgstr "Hikster Admin"
+
+#: hikster/templates/website/core/home.html:22
+msgid "Find"
+msgstr "Trouve"
+
+#: hikster/templates/website/core/home.html:26
+msgid "your playground"
+msgstr "ton terrain de jeu"
+
+#: hikster/templates/website/core/home.html:39
+msgid "We currently have more than"
+msgstr "Nous recensons actuellement plus de"
+
+#: hikster/templates/website/core/home.html:41
+msgid "hiking places"
+msgstr "lieux de pratique"
+
+#: hikster/templates/website/core/home.html:45
+msgid "Join the community of enthusiasts quickly"
+msgstr "Rejoins la communauté de passionnés dès maintenant"
+
+#: hikster/templates/website/core/home.html:49
+msgid "Join the community"
+msgstr "Rejoindre la communauté"
+
+#: hikster/templates/website/core/home/showcase.html:7
+msgid "Our"
+msgstr "Découvre de nouveaux"
+
+#: hikster/templates/website/core/home/showcase.html:8
+msgid "purpose"
+msgstr "terrains de jeu"
+
+#: hikster/templates/website/core/home/showcase.html:11
+msgid "Our goal is simple: simplify the organization of your outings."
+msgstr ""
+"Notre but est simple : simplifier l'organisation de tes sorties plein air"
+
+#: hikster/templates/website/core/home/showcase.html:14
+msgid ""
+"\n"
+"        We create detailed maps and guide in collaboration with the park "
+"managersso that you can explore nature with confidence.\n"
+"      "
+msgstr ""
+"\n"
+"        Nous créons des cartes et descriptions détaillées en collaboration "
+"avec les parcspour que tu puisses profiter de la nature en toute confiance.\n"
+"      "
+
+#: hikster/templates/website/core/home/showcase.html:19
+msgid ""
+"\n"
+"        You can filter by activity, distance, level of difficulty ... to "
+"find THE outing  that corresponds to your desire.\n"
+"      "
+msgstr ""
+"\n"
+"        Tu peux filtrer par activité, distance, niveau de difficulté ...pour "
+"trouver LA sortie qui correspond à tes envies.\n"
+"      "
+
+#: hikster/templates/website/core/home/showcase.html:24
+msgid ""
+"\n"
+"        Join also our amazing community to share your favorite "
+"destinations,  ask questions or organize outdoor adventures.\n"
+"      "
+msgstr ""
+"\n"
+"        Rejoins aussi une communauté de passionnés pour partagertes "
+"destinations coup de coeur, poser des questions et organiser des sorties.\n"
+"      "
+
+#: hikster/templates/website/core/home/showcase.html:28
+msgid "Come, we are so happy to welcome you!"
+msgstr "Rejoins-nous vite, on est heureux de t'accueillir!"
+
+#: hikster/templates/website/core/home/showcase.html:30
+msgid "Any questions? Contact"
+msgstr "Des questions? Contacte"
+
+#: hikster/templates/website/core/home/showcase.html:39
+msgid "supports us"
+msgstr "nous soutient"
+
+#: hikster/templates/website/core/home/showcase.html:52
+msgid "The Ministry of Tourism of Quebec support us"
+msgstr "Le ministère du tourisme du Québec nous soutient"
+
+#: hikster/templates/website/core/home/showcase.html:66
+msgid "We are partner of"
+msgstr "Nous sommes partenaire de"
+
+#: hikster/templates/website/core/toc.html:25
+msgid "1. YOUR ACCEPTANCE"
+msgstr "1. VOTRE ACCEPTATION"
+
+#: hikster/templates/website/core/toc.html:27
+msgid ""
+"\n"
+"            These terms and conditions govern your use of the products and "
+"services offered by HIKSTER Group Inc. (\"Hikster\"), the https://www."
+"hikster.com website (the \"Site\") and the Hikster mobile application ( the "
+"\"Application\") (collectively the Site, the Application and all other "
+"products and services offered by Hikster, the \"Hikster Services\").\n"
+"            "
+msgstr ""
+"\n"
+"Les présents termes et conditions régissent votre utilisation des produits "
+"et services offerts par Groupe HIKSTER Inc. (« Hikster »), du site web "
+"https://www.hikster.com (le « Site ») et de l'application mobile Hikster (l' "
+"« Application ») (collectivement le Site, l'Application et tous les autres "
+"produits et services offerts présentement et dans le futur par Hikster, les "
+"« Services Hikster »).\n"
+" "
+
+#: hikster/templates/website/core/toc.html:32
+msgid ""
+"\n"
+"            Unless otherwise indicated, all materials and content related to "
+"Hikster Services are the property of Hikster and its affiliates. Hikster "
+"grants you access to the Hikster Services and you acknowledge that by this "
+"access you will not acquire any right, title or interest in the Hikster "
+"Services' material and content.\n"
+"            "
+msgstr ""
+"\n"
+"À moins d'indication contraire, tout matériel et contenu reliés aux Services "
+"Hikster est la propriété de Hikster et ses affiliés. Hikster vous accorde un "
+"accès aux Services Hikster et vous reconnaissez que, par cet accès, vous "
+"n'acquerrez aucun droit, titre ou intérêt dans le matériel et contenu des "
+"Services Hikster.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:37
+msgid ""
+"\n"
+"            Hikster Services may not be copied, reproduced, re-published, "
+"downloaded, displayed, transmitted, distributed or used (other than for "
+"their intended use) without the prior written permission of Hikster.\n"
+"            "
+msgstr ""
+"\n"
+"Les Services Hikster ne doivent pas être copiés, reproduits, re-publiés, "
+"téléchargés, affichés, transmis, distribués ou utilisés (autrement que "
+"l'utilisation pour laquelle ils sont destinés) sans l'autorisation écrite "
+"préalable de Hikster.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:42
+msgid ""
+"\n"
+"            Whenever you use the Hikster Services, you represent that you "
+"agree and that all persons whom you represent agree to be bound by these "
+"terms and conditions and declare and warrant that you are entitled to accept "
+"these terms and conditions on your behalf. name and on behalf of the people "
+"you represent. If you do not agree to each of the provisions of these terms "
+"and conditions or if you do not have the authority to accept these terms and "
+"conditions, please do not use the Hikster Services.\n"
+"            "
+msgstr ""
+"\n"
+"Chaque fois que vous utilisez les Services Hikster, vous attestez que vous "
+"acceptez et que toutes les personnes que vous représentez acceptent d'être "
+"liés par les présents termes et conditions et déclarez et garantissez que "
+"vous êtes habilité à accepter les présents termes et conditions en votre nom "
+"et au nom des personnes que vous représentez. Si vous n'acceptez pas chacune "
+"des dispositions des présents termes et conditions ou si vous n'êtes pas "
+"habilité à accepter les présents termes et conditions, veuillez ne pas "
+"utiliser les Services Hikster.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:49
+msgid "2. INFORMATION AND CONFIDENTIALITY"
+msgstr "2. INFORMATION ET CONFIDENTIALITÉ"
+
+#: hikster/templates/website/core/toc.html:51
+msgid ""
+"\n"
+"            By using Hikster Services, you consent to Hikster's collection, "
+"processing and storage of information about you including your name, date of "
+"birth, email, location, address, telephone number, and payment and other "
+"information. for your use of Hikster Services. You warrant that any "
+"information provided to Hikster is true and accurate and that you will "
+"update such information as required.\n"
+"            "
+msgstr ""
+"\n"
+"En utilisant les Services Hikster, vous consentez à ce que Hikster "
+"recueille, traite et stocke de l'information vous concernant notamment votre "
+"nom, date de naissance, courriel, emplacement, adresse, numéro de téléphone "
+"ainsi que de l'information relative aux paiements et à votre usage des "
+"Services Hikster. Vous garantissez que toute information fournie à Hikster "
+"est véridique et précise et que vous mettrez la dite information à jour "
+"lorsque requis.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:56
+msgid ""
+"\n"
+"            Any information you provide to Hikster and any information "
+"collected by Hikster, if any, will remain strictly confidential and will not "
+"be sold, rented or loaned without your consent. However, you agree that "
+"Hikster discloses to a third party any information necessary so that the "
+"third party is able to provide a service that you have requested.\n"
+"            "
+msgstr ""
+"\n"
+"Toute information que vous fournissez à Hikster et toute information "
+"collectée par Hikster, le cas échéant, resteront strictement confidentielles "
+"et ne seront ni vendues, ni louées, ni prêtées, sans avoir obtenu votre "
+"consentement. Toutefois, vous acceptez que Hikster divulgue à un tiers toute "
+"information nécessaire afin que ce tiers soit en mesure de fournir un "
+"service que vous avez demandé.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:63
+msgid "3. PROHIBITED USE"
+msgstr "3. USAGE PROBIHÉ"
+
+#: hikster/templates/website/core/toc.html:65
+msgid ""
+"\n"
+"            It is strictly prohibited to send, post or otherwise transmit "
+"any content or material containing viruses that may cause interruption, "
+"damage or limiting the functionality of Hikster Services or servers "
+"connected to Hikster Services.\n"
+"            "
+msgstr ""
+"\n"
+"Il est strictement interdit d'envoyer, de publier ou autrement transmettre "
+"tout contenu ou matériel contenant des virus ou pouvant causer une "
+"interruption, des dommages ou limitant la fonctionnalité des Services "
+"Hikster ou des serveurs connectés aux Services Hikster.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:70
+msgid ""
+"\n"
+"            You also agree not to behave in a dishonest manner and not to "
+"use the Hikster Services for any unlawful, illegal or harmful purpose.\n"
+"            "
+msgstr ""
+"\n"
+"Vous convenez également de ne pas vous conduire d'une manière désobligeante "
+"et de ne pas utiliser les Services Hikster pour desfins illicites, illégales "
+"ou préjudiciables.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:77
+msgid "4. USER CONTENT"
+msgstr "4. CONTENU DE L'UTILISATEUR"
+
+#: hikster/templates/website/core/toc.html:79
+msgid ""
+"\n"
+"            Hikster Services gives you the ability to post content "
+"including, without limitation, images, photos, comments, ratings and "
+"suggestions (collectively, \"Customer Content\").\n"
+"            "
+msgstr ""
+"\n"
+"Les Services Hikster vous donnent la possibilité de publier du contenu "
+"incluant, sans limitation, des images, photos, commentaires, évaluations et "
+"suggestions (collectivement, le « Contenu du client »).\n"
+" "
+
+#: hikster/templates/website/core/toc.html:84
+msgid ""
+"\n"
+"            You acknowledge and warrant that (i) you are the owner or have "
+"the right to publish the Customer Content, (ii) the publication does not "
+"infringe or violate the rights of third parties, including, without "
+"limitation, copyright privacy, copyright or other intellectual property "
+"rights and (iii) the Customer Content is not obscene, defamatory, "
+"discriminatory, unlawful, illegal, fraudulent, hateful, pornographic or "
+"otherwise offensive or inappropriate.\n"
+"            "
+msgstr ""
+"\n"
+"Vous reconnaissez et garantissez que (i) vous êtes le propriétaire ou avez "
+"le droit de publier le Contenu du client, (ii) que lapublication n'enfreint "
+"pas ou ne viole pas les droits de tiers, incluant, sans limitation, les "
+"droits de respect de la vie privée, les droits d'auteur ou autres droits de "
+"propriété intellectuelle et (iii) le Contenu du client n'est pas obscène, "
+"diffamatoire,discriminatoire, illicite, illégal, frauduleux, haineux, "
+"pornographique ou autrement offensant ou inapproprié.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:89
+msgid ""
+"\n"
+"            You acknowledge that you are fully responsible for your use of "
+"the Hikster Services and the Customer Content and that Hikster can not be "
+"held responsible for the Content of the Customer or the fact that the "
+"Customer Content is copied or reproduced by other users. In addition, "
+"Hikster is under no obligation to review, review, modify, approve or delete "
+"the Customer Content.\n"
+"            "
+msgstr ""
+"\n"
+"Vous reconnaissez que vous êtes entièrement responsable de votre utilisation "
+"des Services Hikster et du Contenu du client et que Hikster ne peut "
+"aucunement être tenue responsable du Contenu du client ou du fait que le "
+"Contenu du client soit copié ou reproduit par d'autres utilisateurs. De "
+"plus, en aucun cas, Hikster n'est obligé d'examiner, réviser, modifier, "
+"approuver ou supprimer le Contenu du client.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:94
+msgid ""
+"\n"
+"            You acknowledge that the Customer Content you publish is not "
+"confidential and you grant Hikster a free, non-exclusive, royalty-free, "
+"worldwide license for use and reproduction in any form for any lawful "
+"purpose. of the Customer's Content, all without payment or consideration in "
+"exchange, even if Hikster derives any benefit from it.\n"
+"            "
+msgstr ""
+"\n"
+"Vous reconnaissez que le Contenu du client que vous publiez n'est pas "
+"confidentiel et vous accordez à Hikster une licence gratuite, non exclusive, "
+"libre de droits et mondiale pour l'utilisation et la reproduction, sous "
+"quelque forme que soit et à des fins légitimes,du dit Contenu du client, le "
+"tout sans paiement ou contrepartie en échange et ce, même si Hikster en tire "
+"un avantage quelconque.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:99
+msgid ""
+"\n"
+"            Hikster reserves the right, in its sole discretion and without "
+"notice, to refuse the publication, deletion or modification of the Customer "
+"Content when the Customer fails to comply with the terms and conditions of "
+"these terms and conditions.\n"
+"            "
+msgstr ""
+"\n"
+"Hikster se réserve le droit, à son entière discrétion et sanspréavis, de "
+"refuser la publication, de supprimer ou de modifier le Contenu du client "
+"lorsque ce dernier ne respecte pas les conditionsdes présents termes et "
+"conditions.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:106
+msgid "5. LINKS TO OTHER WEBSITES"
+msgstr "5. LIENS VERS D'AUTRES SITES INTERNET"
+
+#: hikster/templates/website/core/toc.html:108
+msgid ""
+"\n"
+"            Hikster Services may contain links to other websites or "
+"services. While Hikster strives to provide links to sites or services that "
+"share its high standards of quality and privacy, Hikster is not responsible "
+"for the content or privacy practices of other sites or services. You use "
+"other sites and services at your own risk and can not make any claims to "
+"Hikster as a result of your use of them or your dealings with their owner or "
+"operator. The provisions set out under the \"Limitation of Liability\" "
+"section of these terms and conditions apply, with the necessary "
+"modifications, to your access to and use of other sites and services.\n"
+"            "
+msgstr ""
+"\n"
+"Le Services Hikster peut contenir des liens vers d'autres sites Internet ou "
+"services. Bien que Hikster s'efforce de fournir des liens de sites ou "
+"services partageant ses normes de qualité élevées et son respect de la "
+"confidentialité, Hikster n'est pas responsable du contenu ou des pratiques "
+"de confidentialité en vigueur sur d'autres sites ou services. Vous utilisez "
+"les autres sites et services à vos propres risques, et ne pouvez présenter "
+"aucune réclamation à Hikster par suite de votre utilisation de ceux-ci ou de "
+"vos opérations avec leur propriétaire ou exploitant. Les dispositions "
+"énoncées sous larubrique « Limitation de Responsabilité » des présents "
+"termes et conditions s'appliquent, avec les modifications nécessaires, à "
+"votre accès aux autres sites et services et à leur utilisation.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:115
+msgid "6. LIMITATION OF LIABILITY"
+msgstr "6. LIMITATION DE RESPONSABILITE"
+
+#: hikster/templates/website/core/toc.html:117
+msgid ""
+"\n"
+"            The use and browsing of Hikster Services is at your own risk. If "
+"you are not satisfied with the information contained in the Hikster Services "
+"or these terms and conditions, your sole and exclusive remedy is to stop "
+"accessing and using the Hikster Services.\n"
+"            "
+msgstr ""
+"\n"
+"L'utilisation et la navigation des Services Hikster est à vos propres "
+"risques. Si vous n'êtes pas satisfaits des informations contenues dans les "
+"Services Hikster ou des présents termes etconditions, votre seul et unique "
+"recours est de cesser d'accéder e td'utiliser les Services Hikster.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:122
+msgid ""
+"\n"
+"            In no event shall Hikster, its directors, officers, employees or "
+"other third parties mentioned or involved in the creation, production or "
+"delivery of the Hikster Services be held liable for any direct, indirect, "
+"special or punitive damages whatsoever (including, but not limited to, costs "
+"and expenses incurred, of any nature, loss of profit, loss of data or "
+"programs or cessation of activities) arising from access, use, inability to "
+"use or consequences of the use of Hikster Services, Customer Content or "
+"referenced third-party sites and services.\n"
+"            "
+msgstr ""
+"\n"
+"En aucun cas, Hikster, ses administrateurs, dirigeants, employés ou autres "
+"tiers mentionnés ou impliqués dans la création, la production ou la "
+"livraison des Services Hikster ne sauraient être tenus responsables de tout "
+"dommage direct, indirect, particulier ou punitif quel qu'il soit (y compris, "
+"sans toutefois s'y limiter, les coûts et dépenses encourus, de quelque "
+"nature que ce soit, la perte de profit, la perte de données ou programmes ou "
+"la cessation des activités) découlant de l'accès, de l'utilisation, de "
+"l'inaptitude à utiliser ou des conséquences de l'utilisation des Services "
+"Hikster, du Contenu du client ou des sites et services tiers référencés.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:127
+msgid ""
+"\n"
+"            Hikster can not be held responsible for acts, omissions or "
+"behavior perpetrated by any user or third party.\n"
+"            "
+msgstr ""
+"\n"
+"Hikster ne peut aucunement être tenue responsable des actes, omissions ou "
+"comportements perpétrés par un quelconque utilisateur ou tiers.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:132
+msgid ""
+"\n"
+"            Hikster Services does not give you any right to visit the "
+"Hikster Services listed locations if the managers or persons in authority "
+"there have limited or restricted access. Hikster makes no warranties with "
+"respect to the listed locations and will not be responsible for the "
+"condition of the site at the time of your visit.\n"
+"            "
+msgstr ""
+"\n"
+"Les Services Hikster ne vous donnent aucun droit de vous rendre sur les "
+"lieux répertoriés sur les Services Hikster si les gestionnaires ou les "
+"personnes en autorité sur ces lieux en ont limité ou réglementé l'accès. "
+"Hikster n'offre aucune garantie relativement aux lieux répertoriés et ne "
+"sera pas responsable de l'état des lieux au moment de votre visite.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:137
+msgid ""
+"\n"
+"            Hikster Services, and all communications and information "
+"relating thereto, are provided without any representation, representation or "
+"warranty, express or implied, of any kind whatsoever, including, without "
+"limitation, any warranties as to their accuracy, completeness, reliability, "
+"availability or suitability for a particular purpose. Hikster assumes no "
+"responsibility for any errors or omissions in the Hikster Services or if the "
+"Hikster Services are interrupted or delayed for any reason whatsoever.\n"
+"            "
+msgstr ""
+"\n"
+"Les Services Hikster, ainsi que toute communication et information s'y "
+"rattachant, sont fournis sans aucune représentation, déclaration ou "
+"garantie, explicite ou implicite, de quelque nature que ce soit, y compris, "
+"sans toutefois s'y limiter, toute garantie quant à leur exactitude, "
+"exhaustivité, fiabilité, disponibilité ou adéquation à un usage particulier. "
+"Hikster n'assume aucune responsabilité quant aux erreurs ou oublis dans les "
+"Services Hikster ou si les Services Hikster sont interrompus ou retardés par "
+"quelque raison que ce soit.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:142
+msgid ""
+"\n"
+"            Hikster Services can be used for a variety of purposes under any "
+"circumstances or application and therefore can not be interpreted as being "
+"applicable to your personal situation. By using the Hikster Services, you "
+"agree to be solely responsible for the use of such information, advice, "
+"statements or information provided and that you do so at your own risk.\n"
+"            "
+msgstr ""
+"\n"
+"Les Services Hikster peuvent se prêter à différents usages en toute "
+"circonstance ou application et ne peuvent donc pas s'interpréter comme "
+"pouvant s'appliquer à votre situation personnelle. En utilisant les Services "
+"Hikster, vous convenez d'être le seul responsable de l'utilisation des dits "
+"informations, conseils, déclarations ou renseignements fournis et que vous "
+"le faites à votre propre risque.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:147
+msgid ""
+"\n"
+"            Hikster is not responsible for any damages resulting from the "
+"use of the Hikster Services. This explicit disclaimer includes, but is not "
+"limited to, (i) damage caused by viruses, or other computer software or "
+"malfunctions that may infect, harm, or damage the hardware of your computer, "
+"telephone, tablet, and their software, memories or any other property "
+"belonging to you or others, after accessing, browsing or using the Hikster "
+"Services and (ii) damage to equipment and equipment used during a hike or "
+"other activity on the premises listed on the Hikster Services .\n"
+"            "
+msgstr ""
+"\n"
+"Hikster décline toute responsabilité quant à de quelconques dommages "
+"résultant de l'utilisation des Services Hikster. Cette clause de non-"
+"responsabilité explicite comprend, notamment, (i) les dommages provoqués par "
+"des virus, ou tout autre logiciel informatique ou anomalie pouvant infecter, "
+"nuire ou endommager le matériel de votre ordinateur, appareil téléphonique, "
+"tablette ainsi que leurs logiciels, mémoires ou tout autre bien appartenant "
+"à autrui ou à vous-même, après avoir accéder, naviguer ou utiliser les "
+"Services Hikster et (ii) les dommages aux appareils et équipements "
+"utiliséslors d'une randonnée ou autre activité sur les lieux répertoriés sur "
+"les Services Hikster.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:154
+msgid "7. INTELLECTUAL PROPERTY"
+msgstr "7. PROPRIÉTÉ INTELLECTUELLE"
+
+#: hikster/templates/website/core/toc.html:156
+msgid ""
+"\n"
+"            Hikster, https://www.hikster.com and all other trademarks and "
+"logos appearing on or in connection with the Hikster Services are registered "
+"and / or unregistered trademarks, trade names and service marks. deposited "
+"by Hikster. Other product names, company names, and logos displayed on "
+"Hikster Services may be trade names, trademarks, or service marks, "
+"registered or unregistered, of their respective owners. It is strictly "
+"prohibited to use in any way all trade names, trademarks, service marks and "
+"logos (collectively the \"Marks\") displayed on the Hikster Services. No "
+"reference to Hikster Services or elsewhere shall be construed to accord, by "
+"implication or otherwise, a license or right to use the Trademarks.\n"
+"            "
+msgstr ""
+"\n"
+"Hikster, https://www.hikster.com et tous les autres marques et logos qui "
+"figurent sur les Services Hikster ou en rapport avec ceux-ci sont des "
+"marques de commerce, des noms commerciaux et des marques deservice déposés "
+"et/ou non déposés appartenant à Hikster. Il se peutque d'autres noms de "
+"produits, noms de sociétés et logos affichés sur les Services Hikster soient "
+"des noms commerciaux, des marques de commerce ou des marques de service "
+"déposés ou non déposés de leurs propriétaires respectifs. Il est strictement "
+"interdit d'utiliser de quelque façon que ce soit tous les noms commerciaux, "
+"marques de commerce, marques de service et logos (collectivement les "
+"«Marques») affichés sur les Services Hikster. Aucune mention figurant sur "
+"les Services Hikster ou ailleurs ne doit être interprétée de façon à "
+"accorder, par implication ou autrement, une licence ou un droit "
+"d'utilisation des Marques.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:163
+msgid "8. MODIFICATION OF THESE TERMS AND CONDITIONS"
+msgstr "8. MODIFICATION DES PRÉSENTS TERMES ET CONDITIONS"
+
+#: hikster/templates/website/core/toc.html:165
+msgid ""
+"\n"
+"            Hikster may, in its sole discretion, modify or amend the present "
+"terms and conditions with respect to your future use of Hikster Services for "
+"any reason without notice to you or notice to any other person. beforehand "
+"and without liability to anyone. No user of Hikster Services may modify the "
+"present terms and conditions and / or add new provisions in any way.\n"
+"            "
+msgstr ""
+"\n"
+"Hikster peut, à son entière discrétion, modifier les présents termes et "
+"conditions en ce qui a trait à votre utilisation future des Services Hikster "
+"ou y ajouter de nouvelles dispositions, pour quelque motif que ce soit, sans "
+"vous en aviser ou en aviser une autre personne au préalable et sans engager "
+"sa responsabilité envers quiconque. Aucun utilisateur des Services Hikster "
+"ne peut modifier les présents termes et conditions et/ou y ajouter de "
+"nouvelles dispositions de quelque manière que ce soit.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:170
+msgid ""
+"\n"
+"            In the event of a change to these terms and conditions, your "
+"subsequent access to the Hikster Services as a result of the changes will "
+"irrevocably constitute your acceptance of the changes.\n"
+"            "
+msgstr ""
+"\n"
+"En cas de modification des présents termes et conditions, votre prochain "
+"accès aux Services Hikster suite aux modifications constituera "
+"irrévocablement votre acceptation des modifications.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:177
+msgid "9. APPLICABLE LAW"
+msgstr "9. LOIS APPLICABLES"
+
+#: hikster/templates/website/core/toc.html:179
+msgid ""
+"\n"
+"            These terms and conditions are governed by the laws of Quebec "
+"and the federal laws of Canada applicable therein, excluding any rule of "
+"private international law or conflict of laws that would result in the "
+"application of other laws. . Any dispute between Hikster and you or any "
+"other person relating to the Hikster Services, these terms and conditions or "
+"any related matter shall be settled in the courts of Quebec, in the city of "
+"Montreal, Quebec, Canada, and hereby you irrevocably recognize the original "
+"and exclusive jurisdiction of these courts with respect to any dispute.\n"
+"            "
+msgstr ""
+"\n"
+"Les présents termes et conditions sont régis par les lois du Québec et les "
+"lois fédérales du Canada qui y sont applicables, à l'exclusionde toute règle "
+"de droit international privé ou de conflit de lois qui se traduirait par "
+"l'application d'autres lois. Tout différendentre Hikster et vous ou une "
+"autre personne relative aux Services Hikster, aux présents termes et "
+"conditions ou toute question connexe doit être réglé devant les tribunaux de "
+"Québec, dans la ville de Montréal, Québec, au Canada, et par les présentes, "
+"vous reconnaissez irrévocablement la compétence initiale et exclusive de ces "
+"tribunaux à l'égard de tout différend.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:186
+msgid "10. INDEMNITY"
+msgstr "10. INDEMNISATION"
+
+#: hikster/templates/website/core/toc.html:188
+msgid ""
+"\n"
+"            You acknowledge and agree to hold Hikster and its officers, "
+"employees, agents and other representatives free and harmless from any loss, "
+"claim, action, liability, expense or damage, including reasonable expenses "
+"and legal fees, arising from your use of the Hikster Services, Customer's "
+"Content or breach of these terms and conditions.\n"
+"            "
+msgstr ""
+"\n"
+"Vous reconnaissez et acceptez de tenir Hikster et ses officiers, employés, "
+"agents et autres représentants quitte et indemne de toute perte, "
+"réclamation, action, responsabilité, dépense et dommage, incluant les "
+"dépenses et honoraires juridiques raisonnables, découlant de votre "
+"utilisation des Services Hikster, du Contenu duclient ou de la violation des "
+"présents termes et conditions.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:195
+msgid "11. AMENDMENT, SUSPENSION OR TERMINATION"
+msgstr "11. MODIFICATION, SUSPENSION OU RÉSILIATION"
+
+#: hikster/templates/website/core/toc.html:197
+msgid ""
+"\n"
+"            Hikster reserves the right to modify, suspend or terminate, "
+"without notice and for any reason, the Hikster Services or your access or "
+"use of the Hikster Services, all without any compensation or liability to "
+"you.\n"
+"            "
+msgstr ""
+"\n"
+"Hikster se réserve le droit de modifier, suspendre ou résilier, sans préavis "
+"et pour quelque raison que ce soit, les Services Hikster ou votre accès ou "
+"utilisation des Services Hikster, le tout sans aucune compensation ou "
+"responsabilité envers vous.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:204
+msgid "12. COMPLETE AGREEMENT"
+msgstr "12. ENTENTE COMPLÈTE"
+
+#: hikster/templates/website/core/toc.html:206
+msgid ""
+"\n"
+"            These terms and conditions and any expressly referenced "
+"documents constitute the entire agreement between you and Hikster on the "
+"matters set out herein and supersede any previous contract, negotiation, "
+"discussion or understanding of any nature whatsoever. .\n"
+"            "
+msgstr ""
+"\n"
+"Les présents termes et conditions ainsi que tout document auquel il est "
+"expressément référé constituent l'entente complète entre vous et Hikster sur "
+"les questions faisant l'objet des présentes et remplace tout contrat, "
+"négociation, discussion ou entente antérieure, de quelque nature que ce "
+"soit.\n"
+" "
+
+#: hikster/templates/website/core/toc.html:213
+msgid "13. NULLITY OF A CLAUSE"
+msgstr "13. NULLITÉ D'UNE CLAUSE"
+
+#: hikster/templates/website/core/toc.html:215
+msgid ""
+"\n"
+"            If any provision of these terms and conditions is unlawful, void "
+"or, for any reason, unenforceable, then this provision will be deemed "
+"severed from these terms and conditions and will have no effect on the "
+"validity or character the remaining provisions.\n"
+"            "
+msgstr ""
+"\n"
+"Si une disposition des présent termes et conditions est illégale, nulle ou, "
+"pour quelque raison que ce soit, inexécutable, alors la présente disposition "
+"sera considérée comme dissociée des présents termes et conditions et n'aura "
+"pas d'effet sur la validité ou le caractère exécutoire des dispositions "
+"restantes.\n"
+" "
+
+#: hikster/templates/website/footer.html:15
+msgid "The society"
+msgstr "La société"
+
+#: hikster/templates/website/footer.html:24
+msgid "Useful links"
+msgstr "Liens utiles"
+
+#: hikster/templates/website/footer.html:33
+msgid "Join us on"
+msgstr "Rejoins-nous sur"
+
+#: hikster/templates/website/footer.html:57
+msgid "All rights reserved"
+msgstr "Tous droits réservés"
+
+#: hikster/templates/website/footer.html:60
+msgid ""
+"\n"
+"        Despite all the care taken in presenting our maps, Hikster can not "
+"guarantee the accuracy of the information presented there. The user releases "
+"Hikster from any liability for the use of this information.\n"
+"    "
+msgstr ""
+"\n"
+"Malgré tout le soin apporté à la présentation de nos cartes, Hikster ne peut "
+"garantir l'exactitude des informations qui y sont présentées. L'utilisateur "
+"dégage Hikster de toute responsabilité quant à l'utilisation de ces "
+"informations.\n"
+"    "
+
+#: hikster/templates/website/hike/trail-detail.html:28
+#: hikster/templates/website/location/location-detail.html:33
+msgid "Information"
+msgstr "Locations"
+
+#: hikster/templates/website/hike/trail-detail.html:34
+#: hikster/templates/website/hike/trail-detail.html:160
+msgid "Go to the park description page"
+msgstr "Voir la page de description du réseau"
+
+#: hikster/templates/website/hike/trail-detail.html:38
+msgid "Share"
+msgstr "Partager"
+
+#: hikster/templates/website/hike/trail-detail.html:68
+msgid "Distances and altitude"
+msgstr "Distances et altitudes"
+
+#: hikster/templates/website/hike/trail-detail.html:95
+msgid "Highest point"
+msgstr "Point le + haut"
+
+#: hikster/templates/website/hike/trail-detail.html:104
+msgid "Lowest point"
+msgstr "Point le + bas"
+
+#: hikster/templates/website/hike/trail-detail.html:112
+#, fuzzy
+#| msgid "Trails"
+msgid "3D Trail"
+msgstr "Sentiers 3D"
+
+#: hikster/templates/website/hike/trail-detail.html:114
+msgid "See trail in 3D"
+msgstr "Voir le sentier en 3D"
+
+#: hikster/templates/website/hike/trail-detail.html:120
+#: hikster/templates/website/hike/trail-detail.html:122
+msgid "Activities"
+msgstr "Activités"
+
+#: hikster/templates/website/hike/trail-detail.html:126
+msgid "Activity"
+msgstr "Activité"
+
+#: hikster/templates/website/hike/trail-detail.html:127
+msgid "Estimated time"
+msgstr "Durée estimée"
+
+#: hikster/templates/website/hike/trail-detail.html:146
+#: hikster/templates/website/hike/trail-detail.html:149
+#: hikster/templates/website/location/location-detail.html:59
+#: hikster/templates/website/location/location-detail.html:61
+msgid "About"
+msgstr "A propos"
+
+#: hikster/templates/website/hike/trail-detail.html:156
+#: hikster/templates/website/location/location-detail.html:67
+msgid "No information is available now."
+msgstr "Information non disponible pour le moment."
+
+#: hikster/templates/website/location/location-detail.html:39
+msgid "Tel."
+msgstr "Tel."
+
+#: hikster/templates/website/location/location-detail.html:72
+#, fuzzy
+#| msgid "Trails"
+msgid "Details"
+msgstr "Sentiers"
+
+#: hikster/templates/website/location/location-detail.html:76
+msgid "Access period"
+msgstr "Périodes d'accès"
+
+#: hikster/templates/website/location/location-detail.html:84
+msgid "Access period or time not available"
+msgstr "Information non disponible pour le moment"
+
+#: hikster/templates/website/location/location-detail.html:89
+msgid "Prices"
+msgstr "Tarifs"
+
+#: hikster/templates/website/location/location-detail.html:95
+msgid "Rates unavailable"
+msgstr "Information non disponible pour le moment"
+
+#: hikster/templates/website/location/location-detail.html:99
+msgid "Access"
+msgstr "Accès"
+
+#: hikster/templates/website/location/location-detail.html:106
+msgid "Access unavailable"
+msgstr "Information non disponible pour le moment"
+
+#: hikster/utils/models.py:104
+msgid "Blog"
+msgstr ""
+
+#: hikster/utils/models.py:105
+msgid "Cellular"
+msgstr "Portable"
+
+#: hikster/utils/models.py:107
+msgid "Facebook"
+msgstr ""
+
+#: hikster/utils/models.py:108
+msgid "Fax machine"
+msgstr "Fax"
+
+#: hikster/utils/models.py:109
+msgid "Site"
+msgstr ""
+
+#: hikster/utils/models.py:110
+msgid "Site mobile"
+msgstr ""
+
+#: hikster/utils/models.py:111
+msgid "Telephone"
+msgstr ""
+
+#: hikster/utils/models.py:112
+msgid "Telephone no charge"
+msgstr ""
+
+#: hikster/utils/models.py:113
+msgid "Telephone secondary"
+msgstr "Telephone secondaire"
+
+#: hikster/utils/models.py:114
+msgid "Twitter"
+msgstr ""
+
+#~ msgid "Previous"
+#~ msgstr "Précédent"
+
+#~ msgid "Next"
+#~ msgstr "Suivant"
+
+#~ msgid "In contact with nature, there are only happy memories."
+#~ msgstr ""
+#~ "Notre objectif est simple : simplifer l'organisation de tes sorties plein "
+#~ "air."
+
+#~ msgid ""
+#~ "\n"
+#~ "        It's to allow you to experience some of the highlights we created "
+#~ "Hikster. We help you to realize your desires of escape.\n"
+#~ "      "
+#~ msgstr ""
+#~ "\n"
+#~ "        Nous créons des fiches et cartes détaillées, en collaboration "
+#~ "avec les gestionnaires de parcs pour que tu puises explorer la nature en "
+#~ "toute confiance.\n"
+#~ "      "
+
+#~ msgid ""
+#~ "\n"
+#~ "        By taking you outside to play, we take the risk of falling in "
+#~ "love with nature, its life, its strength, its fragility and give you the "
+#~ "taste to preserve it.\n"
+#~ "      "
+#~ msgstr ""
+#~ "\n"
+#~ "        Tu peux filtrer par activité, distance, niveau de difficulté... "
+#~ "pour trouver LA sortie qui te correspond.\n"
+#~ "      "
+
+#~ msgid ""
+#~ "\n"
+#~ "        We also fell under his spell, which is why Hikster is committed "
+#~ "to donating 1%% of its income for the preservation of the environment.\n"
+#~ "      "
+#~ msgstr ""
+#~ "\n"
+#~ "        Rejoins aussi la communauté pour partager tes destinations coups "
+#~ "de coeurs, poser des questions ou proposer des sorties plein air.\n"
+#~ "      "
+
+#~ msgid "So go out, there is life outside!"
+#~ msgstr "On a hâte de te connaître !"
+
+#~ msgid "To support us, contact"
+#~ msgstr "Des questions ? Contacte"

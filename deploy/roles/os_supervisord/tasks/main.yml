@@ -1,0 +1,28 @@
+---
+  - name: install supervisor
+    become: yes
+    pkgng: name=py27-supervisor state=present
+
+  - name: install supervisor start-up configuration
+    become: yes
+    copy: src=supervisord dest=/etc/rc.conf.d/supervisord
+
+  - name: install supervisor config file
+    become: yes
+    template: >
+      src=supervisord.conf
+      dest=/usr/local/etc/supervisord.conf
+    notify:
+      - restart supervisord
+
+  - name: create supervisord config directory
+    become: yes
+    file: >
+      path=/usr/local/etc/supervisord.d
+      state=directory
+    notify:
+      - restart supervisord
+
+  - name: start supervisord
+    become: yes
+    service: name=supervisord state=started

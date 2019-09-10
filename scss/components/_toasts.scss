@@ -1,0 +1,59 @@
+.toasts {
+  @include media($mobile) {
+    width: 90vw;
+  }
+  @include media($tablet) {
+    width: 60vw;
+
+  left: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  z-index: 999999999;
+  }
+
+  .toast {
+    position: absolute; // Positioning
+
+    &--top {
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+      top: 10px;
+      text-align: center;
+    }
+
+    &--bottom {
+      bottom: 30px;
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+    }
+
+    &--corner {
+      right: 30px;
+      top: 30px;
+    }
+
+    &--enter {
+      @include transform(translate3d(0 -100% 0)); // toast type
+      @include transition(opacity .5s ease-in);
+      opacity: 0.01;
+    }
+
+    &--enter-active {
+      @include transform(none);
+      opacity: 1;
+    }
+
+    &--leave {
+      @include transition(opacity .5s ease-in);
+      opacity: 1;
+    }
+
+    &--leave-active {
+      @include transform(translate3d(0 100% 0));
+      opacity: 0;
+    }
+  }
+}

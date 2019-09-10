@@ -1,0 +1,58 @@
+// Layout
+.profile-page {
+  .profile-content {
+    margin: 1em;
+  }
+
+  // Non-BEM overrides
+  .tabs {
+    margin-top: 100px;
+  }
+
+  .tab-panel {
+    padding: 1em;
+  }
+
+  @include media($tablet) {
+    .tabs-navigation {
+      @include display(flex);
+      @include justify-content(center);
+    }
+  }
+
+  .edit-form__text {
+
+    textarea {
+      font-size: 0.9em;
+    }
+  }
+}
+
+// Styles
+.profile-item {
+  $white: #fff;
+  background: $white !important;
+
+  &--edit {
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    z-index: 20;
+  }
+
+  // Non-BEM overrides
+  & > .content {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  a {
+    color: $white;
+  }
+
+  .leaflet-control-container a {
+    color: #333;
+  }
+}

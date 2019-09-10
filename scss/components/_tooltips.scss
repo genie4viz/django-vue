@@ -1,0 +1,23 @@
+.tooltip {
+  $tooltip-background: #1b1c1d;
+  $tooltip-font-color: #fff;
+  $tooltip-shadow: #ccc;
+
+  border-radius: 4px;
+  box-shadow: 5px 5px 8px $tooltip-shadow;
+  color: $tooltip-font-color;
+  display: none;
+  line-height: 16px;
+  padding: 14px 20px;
+  z-index: 10;
+
+  &--open {
+    background: $tooltip-background;
+    display: inline;
+    position: absolute;
+  }
+
+  &--right {
+    @include transform(translate(50%, -50%));
+  }
+}

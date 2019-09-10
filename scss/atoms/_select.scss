@@ -1,0 +1,128 @@
+@import "../../node_modules/react-select/dist/react-select";
+
+.main-search {
+  &__hike-filters {
+    .Select-control {
+      background-color: transparentize($black, 1);
+      border: 0;
+      border-radius: 0;
+
+      .Select-placeholder {
+        color: white;
+      }
+    }
+
+    .Select-option.is-selected {
+      background-color: #bbe59e;
+    }
+
+    .Select-option.is-focused {
+      background-color: #c6eaae;
+    }
+
+    .Select-control {
+      &:hover {
+        box-shadow: none;
+      }
+
+      .Select-input {
+        &:focus {
+          background: none;
+        }
+      }
+    }
+
+    .is-open {
+      & > .Select-control {
+        background-color: transparentize($white, 0.7);
+        border: 0;
+        border-bottom: 2px solid $white;
+      }
+    }
+
+    .is-focused {
+      outline: none;
+
+      &:not(.is-open) > .Select-control {
+        border-color: $accent-color;
+        background: none;
+      }
+    }
+
+    .Select-input > input {
+      background: transparentize($black, 1) !important;
+    }
+
+    .has-value.Select--single > .Select-control .Select-value .Select-value-label,
+    .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+      color: #fff;
+      font-size: em(16);
+    }
+
+    .modifiedFieldBg {
+      .has-value.Select--single > .Select-control .Select-value .Select-value-label,
+      .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+        color: #333;
+      }
+    }
+
+    .has-value.is-pseudo-focused:not(.Select--multi) > .Select-control > .Select-value .Select-value-label,
+    .has-value:not(.Select--multi) > .Select-control > .Select-value .Select-value-label {
+      color: $white;
+    }
+
+    .Select-arrow {
+      border-color: none;
+      border-width: 0;
+      border-style: none;
+      height: 15px;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../img/SVG_Contours_Blanc/Bas.svg");
+    }
+
+    &--open {
+      .has-value.Select--single > .Select-control > .Select-value .Select-value-label,
+      .has-value.is-pseudo-focused.Select--single > .Select-control > .Select-value .Select-value-label {
+        color: black;
+      }
+
+      .Select-arrow {
+        background-image: url("../img/SVG_Contours_vert/Bas.svg");
+      }
+    }
+  }
+}
+
+.result-search {
+
+  padding: 0.5em;
+
+  .react-autosuggest__container {
+    margin-bottom: em(10);
+  }
+
+  .react-autosuggest__input {
+    border: 1px solid #ddd !important;
+  }
+
+  &__hike-filters {
+    background-color: $white;
+    border: 1px solid $accent-color;
+    left: 0;
+    padding: 0.5em;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+
+    &--closed {
+      display: none;
+    }
+
+    &--open {
+      display: block;
+    }
+  }
+}

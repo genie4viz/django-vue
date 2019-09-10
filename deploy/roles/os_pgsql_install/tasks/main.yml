@@ -1,0 +1,8 @@
+---
+  - name: install postgresql
+    become: yes
+    pkgng: name=postgresql95-server state=present
+
+  - name: install python libraries
+    become: yes
+    pkgng: name=py36-psycopg2 state=present

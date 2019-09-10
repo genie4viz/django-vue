@@ -1,0 +1,12 @@
+.dropzone {
+  $border-color: rgba(34, 36, 38, 0.15);
+
+  border: 2px dashed $border-color;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 100px;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+---
+- hosts: all
+  vars:
+    ansible_python_interpreter: /usr/local/bin/python3.6
+    domain_name: api.hikster.com
+    short_name: hikster
+    app_database: hikster_api_dev
+    app_database_user: hikster_api_dev
+    app_database_password: hikster_api_dev_password
+    app_django_settings: hikster.settings.vagrant_api
+    app_email_host_user: none
+    app_email_host_password: none
+  roles:
+     - os_updates
+     - os_devel
+     - os_geoip_databases
+     - os_pgsql_install
+     - os_pgsql_start
+     - os_postgis_install
+     - os_redis
+     - pgsql_user
+     - pgsql_database_postgis
+     - app_dirs
+     - app_django

@@ -1,0 +1,65 @@
+.profile-widget {
+  display: inline-block;
+
+  &__avatar {
+    cursor: pointer;
+  }
+
+  &__menu {
+    background-color: $white;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    @include media($mobile) {
+      width: 50vw;
+    }
+    @include media($tablet) {
+      width: 30vh;
+    };
+
+    &--loggedin {
+      text-align: center;
+    }
+  }
+
+  &__subscribe {
+    margin-top: 10px;
+  }
+  // Overrides for non-BEM style element
+  p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  span {
+    color: white;
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 12px !important;
+    line-height: normal !important;
+    margin: 0 !important;
+    cursor: pointer;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  .ui.avatar.image {
+    @include size(30px);
+    background-color: $white;
+  }
+
+  .ui.form input[type="email"],
+  .ui.form input[type="password"],
+  .ui.form input[type="text"] {
+    border: 1px solid rgba(34,36,38,.15);
+  }
+
+  .tooltip {
+    &::before {
+      border-bottom-color: $white;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.contest-rules-page {
+  margin: 130px;
+
+  img {
+    margin: 15px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  a{
+    text-decoration: underline;
+  }
+
+  section {
+      ol {
+        font-size: 14px;
+        list-style-type: inherit;
+        padding-left: 3em;
+      }
+
+      ul {
+        font-size: 14px;
+      }
+  }
+}

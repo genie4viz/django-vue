@@ -1,0 +1,1 @@
+{{ database_host }}:5432:{{ app_database }}:{{ app_database_user }}:{{ app_database_password }}

@@ -1,0 +1,45 @@
+.expander {
+  $base-font-size: 1em !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $base-font-color: $dark-gray !default;
+  $expander-arrow-width: 0.7em;
+  $expander-toggle-size: 1em;
+  $expander-toggle-arrow-size: $expander-toggle-size;
+  $expander-toggle-margin: 1em;
+  background-color: $white;
+  border-radius: em(5);
+  padding: 0.5em;
+
+  .expander-trigger {
+    color: #4d4d4d;
+    cursor: pointer;
+    display: block;
+    font-size: $expander-toggle-size;
+    margin-bottom: $expander-toggle-size;
+    padding-bottom: $expander-toggle-size / 4;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+  }
+
+  i {
+    background-color: #dbdada;
+    border-radius: 2px;
+    color: $white;
+    float: right;
+    padding: 3px;
+  }
+
+  .expander-content p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  .expander-hidden + .expander-content {
+    display: none;
+  }
+}

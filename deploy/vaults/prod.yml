@@ -1,0 +1,34 @@
+---
+app_database: hikster_api_prod
+app_database_user: hikster_api_prod
+app_database_password: gKDb2HbxNZiu
+app_email_host_user: none
+app_email_host_password: none
+ssh_deploy_key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEowIBAAKCAQEAxNlJzGiZLDKBMouoXMMQmwVhQD5dzgkE0oK5cDS/r8fzjuLg
+  ZBtaYHw8mrE0yb8eAZoUgg8zy/41q1LmR3DdMhIntfnn/AwoyaWQdZ4stu/0w205
+  yHVFGlxmJOoMtq1w1JnhAnPSgbxXDeV4Q8i5drgMdTVxl/dMytI1VeSgw0/9gXuZ
+  DwcTZxQm0Tq7Fr8im+ePOkNUDUyvgoez+gICDxQzhe+5APalsdLRFRAv0mT9BSNy
+  /QZEdOJecBchb9CgBP1Z1Z4oAybJ53JJyEuwMexiVpAX4Ko3PLndNz4KPeCk8Cbs
+  8JveVkTERmTJgxNfCabSWR599i6pR/tYzEGh+QIDAQABAoIBAFxGQyrXqV2nexq3
+  jr+VDPauKe1UjuJjJeiMMOMhRu3efBRx05/5ln7+HeahxM4Bkc5MbOqet7gbPQtH
+  e/znMjkje4v5Tr6+8Gu9+Z64+9rxVro5PEn0duUphRQuxrDnUqnGTEy7AGWiZOh1
+  tc+Iiy/UjLpwyAPlgBDfQvM1jgqfZP/sV8r7PREDIMYpIfVV0dgBVqjgVJDsAmzm
+  Ho4bFuUbuf/dPrHaDyQBVexBEwo9Cb8/OM8z2SjAjsuC0pqWAP1Z6q3TH3FzPGma
+  mQ/JCED47HEHakqghrAnXvqDA+W6yUu4g6aGeudooEJ65OE+3+3dpqD5zwpKK6Oc
+  6hP40pECgYEA5eedqfWDaP7mvyNk2XtRPSa5wFt1aynL+aPlKww1vkvg02Se8AhC
+  2MK1Nf9Rb8Q0P6uprUE4BwXb/Gp38bhL1z9Pdk4EzsHJptmmOrbHIJV//oVtLau5
+  XhQoUTj7XN0M65zKBVjU6KcuFqleZNaVb2A2EQPqWF8935Byos6+39UCgYEA2zEo
+  vgPl6XxzOJ6trFrf+XViwDXvVpmEXaGy8n2BKKdFe3uPgv1YjbXnu6/yze1oUB4L
+  Zoh+VMtqe8D+cM+0WlkKuih+1KNhRXIeZo/4o+THJE+iKpiUrHRKY8U+5iMIHRn7
+  p5x+G8Z5npAfxdPq7mF4ppyfaw/AZgFcP42sb5UCgYEA00Csw0tx4Ly40tF3DdAe
+  qg43iOWBU2Mops9O+OtTRvT6NcSztuQgaIUhdeiRsB2d1ROr6iOPlARyS9KZPGeY
+  aMUoAxFVoZa38LT15eWlu+8jmYCI/fpZbnUfRuMRNhd4k9eSWq9xlAZqdzBSKF51
+  Gc5SX/g1EdcSR6e3bpqDEbECgYBdhF7GmzEnadJa8NBWPbtbWirUqO5BO2RO8mM/
+  tC474wnxAimbkG2MoHSLDimAlG6x5++jQk7r7JG01QV5qhRfi6fY/tgF7uLcVzED
+  Px+tBTm1k0gz9j9QSJlIcepBE+ctS12kCE+BmC9haEo2BBEyvWFVbHNToTfMDX6H
+  GvHb9QKBgFrhIAJrj9CMgA3Lv1DC/bNbEW4wc60Vg0itvs2IStUQIoHxTwNgPmIp
+  Sgh11CeFbBa2xXxQCHDseaz8gv/OrI+0y0yzZMbzIV6W5cBdC7pJnmKaSUdvU0Kz
+  4iq1fDUINEC1HY112naUX7ifA6v3YGN3eapNBOU6X6J/JuLXKDAv
+  -----END RSA PRIVATE KEY-----

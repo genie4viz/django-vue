@@ -1,0 +1,31 @@
+---
+
+  - name: create install directory
+    become: yes
+    file: >
+      path={{ app_install_dir }}
+      state=directory
+      owner={{ ansible_user_id }}
+
+  - name: create conf directory
+    file: >
+      path={{ app_install_dir }}/conf
+      state=directory
+
+  - name: create logs directory
+    become: yes
+    file: >
+      path={{ app_install_dir }}/logs
+      state=directory
+      owner={{ ansible_user_id }}
+      group=www
+
+  - name: create public directory
+    file: >
+      path={{ app_install_dir }}/public
+      state=directory
+
+  - name: create app libs directory
+    file: >
+      path={{ app_install_dir }}/public/app
+      state=directory

@@ -1,0 +1,7 @@
+---
+  - name: rebuild search index
+    django_manage: >
+      virtualenv={{ app_install_dir }}/env
+      app_path={{ app_install_dir }}/src
+      settings={{ app_django_settings }}
+      command="rebuild_index --noinput"

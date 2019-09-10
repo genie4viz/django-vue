@@ -1,0 +1,124 @@
+.results-list {
+  padding-top: 7.5em;
+  position: absolute;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 999;
+  background-color: white;
+}
+
+.results-container {
+  overflow-y: auto;
+
+  p {
+    margin: 1em;
+  }
+
+  .results-container__item {
+    height: 220px;
+    margin: 0 0;
+
+    img {
+      display: block;
+      position: relative;
+      max-width: none;
+      width: calc(100% + 20px);
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: translate3d(-10px,0,0);
+      transform: translate3d(-10px,0,0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
+}
+
+.results-container__item  {
+
+  &:hover img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+
+  .trail-details {
+    background-color: #dbdada;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 10.6em;
+    @media only screen and (max-width:400px) {
+      top: 15.2em
+    }
+    opacity: 0.8;
+    text-align: center;
+    transition: transform 0.4s;
+
+    a {
+      cursor: pointer;
+    }
+
+    .icon-Boussole {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 0.7em;
+      margin-top: 0.2em;
+      margin-bottom: 0;
+    }
+
+    strong {
+      font-size: 0.8em;
+      color: black;
+    }
+
+    .trail-details--item {
+        & > a {
+          font-size: 0.7em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: black;
+          opacity: 0.8;
+          line-height: 2.4em;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+
+  .user-actions {
+    position: relative;
+    background-color: #87d255;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    font-size: small;
+    transition: transform 0.4s, opacity 0s 0.5s;
+    opacity: 0;
+
+    .btn--result__results-component > a {
+      color: black;
+    }
+  }
+
+  &:hover {
+    .trail-details {
+      transform: translateY(-28px);
+    }
+
+    .user-actions {
+      opacity: 1;
+      transform: translateY(-30px);
+      transition: transform 0.4s, opacity 0s;
+    }
+  }
+}

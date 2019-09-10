@@ -1,0 +1,106 @@
+{% load i18n static %}
+<!doctype html>
+<html>
+  <head>
+    {% if ENV == "prod" %}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79939834-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-79939834-1');
+        </script>
+    {% endif %}
+    <title>
+      {% block title %}{% endblock title %}
+    </title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <style>
+    #loading-mask {
+      display: flex;
+      position: fixed;
+      background: #fff;
+      z-index: 100000;
+      width: 100%;
+      height: 100%;
+      justify-content: center!important;
+    }
+    .preloader,
+    #loading-mask .loader {
+      border: 10px solid #f3f3f3; /* Light grey */
+      border-top: 10px solid #529214;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    #loading-mask .loader {
+      width: 100px;
+      height: 100px;
+      top: 150px;
+      position: absolute;
+    }
+
+    .preloader.small {
+      width: 50px;
+      height: 50px;
+
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
+    <link rel="stylesheet" href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    {% include "settings.html" %}
+
+    {% block head_extra %}
+    {% endblock head_extra %}
+
+  </head>
+
+  <body class="no-scroll">
+    {% block body_before_container %}
+    {% endblock body_before_container %}
+
+    <div class="wrapper">
+      {% include "website/components/header.html" %}
+
+      <div>
+        {% include "common/preloader.html" %}
+
+        {% block body_container %}
+        {% endblock body_container %}
+      </div>
+      {% if not no_footer %}
+        {% include "website/footer.html" %}
+      {% endif %}
+    </div>
+
+    <script>
+    $(window).bind("load", function() {
+        $("#loading-mask").fadeOut();
+        $("body").removeClass("no-scroll");
+    });
+    </script>
+    {% block body_js %}
+    {% endblock body_js %}
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.quote {
+  font-style: italic;
+  color: $dark-gray-font;
+}
+
+.info-page {
+  &__item {
+    margin-bottom: em(25);
+  }
+}

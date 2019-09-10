@@ -1,0 +1,3 @@
+---
+ansible_ssh_user: freebsd
+ansible_port: 22002

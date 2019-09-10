@@ -1,0 +1,66 @@
+---
+  - name: install python geoip libraries for geodjango
+    become: yes
+    pkgng: name=py36-GeoIP2 state=present
+
+  - name: install xapian for search
+    become: yes
+    pkgng: name={{ item }} state=present
+    with_items:
+      - xapian-core
+      - py36-xapian
+    notify:
+      - rebuild search index
+
+  - name: create django_cache directory
+    become: yes
+    file: >
+      path={{ app_install_dir }}/var/django_cache
+      state=directory
+      owner=www
+      group=www
+
+  - name: install cron job for search
+    cron: >
+      name='update search index {{ domain_name }}'
+      minute='*/15'
+      job='export DJANGO_SETTINGS_MODULE={{ app_django_settings }} && {{ app_install_dir }}/env/bin/python {{ app_install_dir }}/src/manage.py update_index'
+      state=present
+
+  - name: create python virtual environment and upgrade pip to latest version
+    pip: >
+      virtualenv={{ app_install_dir }}/env
+      virtualenv_command='/usr/local/bin/python3.6 -m venv'
+      virtualenv_site_packages=yes
+      name=pip
+      state=latest
+
+  - name: install project requirements
+    pip: >
+      virtualenv={{ app_install_dir }}/env
+      requirements={{ app_install_dir }}/src/requirements.txt
+    environment:
+      CPATH: /usr/include:/usr/local/include
+      LIBRARY_PATH: /usr/lib:/usr/local/lib
+
+  - name: generate django settings secrets file
+    become: yes
+    ignore_errors: yes
+    template: >
+      src=secrets.py
+      dest={{ app_install_dir }}/src/{{ short_name }}/settings/secrets.py
+      owner={{ ansible_ssh_user }}
+      group=www
+      mode=0640
+
+  - name: set exec perms on manage.py
+    file: >
+      path={{ app_install_dir }}/src/manage.py
+      mode=0755
+
+  - name: migrate database
+    django_manage: >
+      virtualenv={{ app_install_dir }}/env
+      app_path={{ app_install_dir }}/src
+      settings={{ app_django_settings }}
+      command=migrate

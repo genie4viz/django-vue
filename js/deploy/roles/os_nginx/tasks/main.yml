@@ -1,0 +1,29 @@
+---
+  - name: install nginx
+    become: yes
+    pkgng: name=nginx state=present
+
+  - name: copy nginx configuration
+    become: yes
+    copy: src=nginx.conf dest=/usr/local/etc/nginx/nginx.conf backup=yes
+    notify:
+      - restart nginx
+
+  - name: copy nginx proxy_params
+    become: yes
+    copy: src=proxy_params dest=/usr/local/etc/nginx/proxy_params backup=yes
+    notify:
+      - restart nginx
+
+  - name: create nginx conf.d directory
+    become: yes
+    file: path=/usr/local/etc/nginx/conf.d state=directory
+
+  - name: install nginx start-up configuration
+    become: yes
+    copy: src=nginx dest=/etc/rc.conf.d/nginx
+
+  - name: start nginx
+    become: yes
+    service: name=nginx state=started
+

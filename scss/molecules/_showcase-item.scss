@@ -1,0 +1,69 @@
+.homepage-typo {
+  color: #444;
+  text-align: center;
+
+  h2 {
+    font-size: 2em;
+    word-break: keep-all;
+
+    small {
+      font-weight: lighter;
+    }
+  }
+}
+
+.gps-announcement {
+  @extend .homepage-typo;
+}
+
+.showcase-header {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: row;
+  @extend .homepage-typo;
+  @include media($tablet) {
+    flex-direction: column;
+  }
+
+  &__partner {
+    margin-bottom: 3em;
+
+//OVERRIDE ui small image style
+    .randoquebec_logo {
+      height: 95px !important;
+      margin: -15px auto !important;
+    }
+  }
+
+}
+
+.our-selections {
+  background-color: #ddd;
+}
+
+.grid-item,
+.grid-item--popular {
+  @include media($mobile) {
+    padding: 0 em(10) em(20);
+  }
+  @include media($tablet) {
+    padding: 0 em(10) em(20);
+  }
+}
+@include media($mobile) {
+  .grid-item,
+  .grid-item--popular,
+  .grid-sizer {
+    width: 100%;
+  }
+}
+@include media($tablet) {
+  .grid-item,
+  .grid-sizer {
+    width: 33.333%;
+  }
+
+  .grid-item--popular {
+    width: 66.666%;
+  }
+}

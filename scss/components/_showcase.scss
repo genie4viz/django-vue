@@ -1,0 +1,20 @@
+.showcase-header {
+
+  &__partners {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
+    margin-top: 5em;
+
+    @include media($mobile) {
+      @include flex-direction(column);
+    }
+    @include media($tablet) {
+      @include flex-direction(row);
+    }
+  }
+
+  &__partner {
+    @include flex-basis(33.3333%);
+  }
+}

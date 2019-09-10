@@ -1,0 +1,36 @@
+---
+  - name: install root ca certs
+    become: yes
+    pkgng: name=ca_root_nss state=present
+
+  - name: install scm
+    become: yes
+    pkgng: name=git,mercurial,subversion state=present
+
+  - name: install development tools
+    become: yes
+    pkgng: name=gmake,gtar
+
+  - name: link python
+    become: true
+    file:
+      src: /usr/local/bin/python2.7
+      path: /usr/local/bin/python
+
+  - name: install sass
+    become: yes
+    pkgng: name=rubygem-sass34
+
+  - name: install node package manager
+    become: yes
+    pkgng: name=npm-node8
+
+  - name: install gulp
+    become: yes
+    npm:
+      name: browserify
+      global: yes
+
+  - name: install npm packages
+    npm:
+      path: '{{ app_install_dir }}/src'

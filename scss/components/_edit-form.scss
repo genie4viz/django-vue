@@ -1,0 +1,91 @@
+.edit-form {
+    $border-radius: 0 0.28571429rem 0.28571429rem 0;
+    $border-color: rgba(34, 36, 38, 0.15);
+    @include display(flex);
+    @include flex-direction(column);
+    height: 100%;
+    padding: 1em;
+    overflow-y: auto;
+    &__map,
+    &__text {
+        margin-right: 1em;
+    }
+    &__map {
+        @include flex-basis(100%);
+        @include media($mobile) {
+            display: none;
+        }
+        @include media($tablet) {
+            display: block;
+        }
+        .map {
+            @include fill-parent;
+            height: 80vh;
+        }
+    }
+    &__text {
+        @include flex-basis(30%);
+        padding: .0em;
+    }
+    // Non-BEM overrides
+    &.ui.form {
+      margin: 3em 0;
+    }
+    &.ui.label {
+        vertical-align: none;
+    }
+    &.ui.labeled.input>.label:not(.corner) {
+        padding: 0;
+    }
+    // Non-BEM override
+    &.ui.form input {
+        border: 1px solid $light-gray;
+    }
+    // &.ui.form .field:focus {
+    //     outline: none;
+    // }
+    &select {
+        -webkit-appearance: none;
+        background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+        border-color: $border-color;
+        border-radius: $border-radius;
+        padding-left: .5em;
+    }
+    &.ui.action.input:not([class*="left action"])>.button:last-child {
+        border-radius: $border-radius;
+        line-height: 1em;
+    }
+    &.ui.card>.extra,
+    &.ui.cards>.card>.extra {
+        min-height: initial !important;
+    }
+    &.ui.form .grouped.fields {
+        padding: .5em;
+    }
+
+    h4 {
+      font-size: 0.92857143em
+    }
+
+    .ui.checkbox > label {
+      font-weight: bold !important;
+    }
+
+    .inline.field > label {
+      margin-bottom: 1em !important;
+    }
+
+    //styles for the dog icon on location form
+    &__dog {
+      img {
+          display: inline-block !important;
+        }
+
+      >.field {
+        display: inline-block !important;
+      }
+    }
+
+}

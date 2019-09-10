@@ -1,0 +1,24 @@
+---
+  - name: create backup directory
+    become: yes
+    file: >
+      path={{ app_install_dir }}/var/backups
+      state=directory
+      owner={{ ansible_ssh_user }}
+
+  - name: install cron job for backup
+    cron: >
+      name='backup db {{ app_database }}'
+      hour='0'
+      job='/usr/local/bin/pg_dump -U {{ app_database_user }} -Fc {{ app_database }} > {{ app_install_dir }}/var/backups/hikster-`date +\%y\%m\%d`.gz'
+      state=present
+
+  - name: install cron job for removing old backups
+    cron: >
+      name='remove old backups: {{ app_database }}'
+      hour='0'
+      job='/usr/bin/find {{ app_install_dir }}/var/backups -name "*.gz" -type f -mtime +7 -exec rm -f {} \;'
+      state=present
+
+  # - name: backup database
+  #   command: "/usr/local/bin/pg_dump -U {{ app_database_user }} --file={{ app_install_dir }}/var/backups/hikster-{{ ansible_date_time.iso8601 }}.sql {{ app_database }}"

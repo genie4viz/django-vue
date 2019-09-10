@@ -1,0 +1,10 @@
+---
+  - name: create user
+    postgresql_user: >
+      login_user={{ database_admin_user }}
+      login_password={{ database_admin_password }}
+      login_host={{ database_host }}
+      name={{ app_database_user }}
+      password={{ app_database_password }}
+      role_attr_flags=CREATEDB,LOGIN
+      state=present

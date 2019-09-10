@@ -1,0 +1,15 @@
+.wrapper {
+  @include fill-parent;
+  @include outer-container(100%);
+
+  footer,
+  header,
+  section {
+    @include fill-parent;
+    @include row(table);
+  }
+
+  header {
+    padding-top: 0px;
+  }
+}

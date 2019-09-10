@@ -1,0 +1,14 @@
+$accent-red: #ff4242;
+
+.error-message {
+  background-color: lighten($accent-red, 20%);
+  border: 1px solid $accent-red;
+  border-radius: 5px;
+  color: $accent-red;
+  font-size: 12px;
+  margin-top: 5px;
+  padding: 0.25em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}

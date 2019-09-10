@@ -1,0 +1,126 @@
+@import "layout";
+
+$img-height: 40px;
+$img-width: 135px;
+
+.hero-divs {
+  @include flex-basis(35%);
+}
+
+.wrapper {
+  .hero {
+    @include display(flex);
+    @include flex-direction(column);
+
+    &__app-logos,
+    &__content {
+      @include align-self(center);
+    }
+
+    &__content {
+      min-width: 80%;
+      @include justify-content(space-around);
+      @include align-content(space-around);
+      @include align-items(center);
+    }
+
+    &__search-form {
+      @extend .hero-divs;
+      @include flex-grow(1);
+      @include media($mobile) {
+        max-width: 100%;
+      }
+      // @include media($desktop) {
+      //   max-width: 45%;
+      // }
+      // IE10 and IE11 default values for flex are 0 0 auto rather than 0 1 auto, as per the draft spec, as of September 2013.
+      @include flex(1 0 auto);
+    }
+
+    &__info {
+      @extend .hero-divs;
+      @include flex-grow(1);
+      // IE10 and IE11 default values for flex are 0 0 auto rather than 0 1 auto, as per the draft spec, as of September 2013.
+      @include flex(1 0 auto);
+    }
+
+    &__link {
+      text-align: center;
+    }
+  }
+
+  .device-background-content,
+  .gps-announcement-details {
+    @include media($mobile) {
+      width: 100%;
+    }
+    @include media($tablet) {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+  .gps-announcement-details {
+    &__newsletter {
+      @include media($tablet) {
+        margin: 0 auto;
+        width: 35%;
+      }
+    }
+  }
+
+  .main-search {
+    .poi-filter {
+      display: none;
+    }
+  }
+
+  .homepage-typo {
+    padding: 3em;
+  }
+
+  .showcase-header {
+    padding: 3em 3em 2em;
+  }
+
+  .our-selections {
+    padding: 3em 6em 6em;
+    text-align: center;
+    @include media($mobile) {
+      padding: 2em;
+    }
+    @include media($tablet) {
+      padding: 3em 5em 5em;
+    }
+
+    .our-selections__header {
+      height: 2em;
+    }
+
+    .showcase {
+      @include media($mobile) {
+         @include span-columns(4)
+      }
+      @include media($desktop) {
+         @include span-columns(12);
+      }
+    }
+  }
+
+  .device-background {
+    height: 400px;
+  }
+
+  .badges {
+    &__logo {
+      height: $img-height;
+      margin: calc(#{$img-height}/4);
+      width: $img-width;
+
+      &--google {
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

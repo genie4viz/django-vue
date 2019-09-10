@@ -1,0 +1,46 @@
+.toolbox {
+    $header-color: #ff4242;
+
+  @include media($mobile) {
+    width: 100vw;
+  }
+  @include media($tablet) {
+    min-width: 188px;
+    width: 25%;
+  }
+
+  position: absolute;
+  z-index: 999;
+
+  &__header {
+    background-color: $header-color;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    height: 24px;
+
+    &:hover {
+      background-color: darken($header-color, 20%);
+    }
+  }
+
+  &__h3 {
+    color: white;
+    font-size: 1em;
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  &__content {
+    color: #4d4d4d;
+    background-color: #FFF;
+    border: 1px solid #dbdada;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: .75em;
+    padding: 1.25em 2em;
+
+    &--hidden {
+      display: none;
+    }
+  }
+}
